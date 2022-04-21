@@ -4,18 +4,20 @@ For more information to authorize your copies, you can contact him on discord: h
 or contact him via Twitter: https://twitter.com/CibNumeritos - Don't share direct download links.
 */
 import { world, BeforeChatEvent } from 'mojang-minecraft';
-world.getDimension('overworld').runCommand(`scoreboard objectives add uopsdb dummy`);
-try {
-    world.getDimension('overworld').runCommand(`scoreboard players set uopsMinPlayers uopsdb 1`);
-    world.getDimension('overworld').runCommand(`scoreboard players set uopsSleepingPlrs uopsdb 0`);
-    world.getDimension('overworld').runCommand(`scoreboard players set uopsTimeAdd uopsdb 50`);
-} catch (error) {
-    console.warn(error);
-};
 let minPlayers;
 let sleepingPlayers;
 let timeAdd;
 let prefix = "!";
+try {
+    world.getDimension('overworld').runCommand(`scoreboard objectives add uopsdb dummy`);
+    minPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage.match(/-?\d+/)[0]);
+    sleepingPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsSleepingPlrs uopsdb * *`).statusMessage.match(/-?\d+/)[0]);
+    timeAdd = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`).statusMessage.match(/-?\d+/)[0]);
+} catch (error) {
+    world.getDimension('overworld').runCommand(`scoreboard players set uopsMinPlayers uopsdb 1`);
+    world.getDimension('overworld').runCommand(`scoreboard players set uopsSleepingPlrs uopsdb 0`);
+    world.getDimension('overworld').runCommand(`scoreboard players set uopsTimeAdd uopsdb 50`);
+};
 world.events.beforeChat.subscribe(data => {
     if (data.message.startsWith(prefix)) { 
         commands(data);
@@ -23,9 +25,9 @@ world.events.beforeChat.subscribe(data => {
     };
 });
 world.events.tick.subscribe((currentTick) => {
-    minPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`));
-    sleepingPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsSleepingPlrs uopsdb * *`));
-    timeAdd = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`));
+    minPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
+    sleepingPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsSleepingPlrs uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
+    timeAdd = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
     if (isNight() && sleepingPlayers >= minPlayers) {
         if (currentTick % 20 === 10) {
             world.getDimension('overworld').runCommand(`time add ${timeAdd}`);
@@ -34,7 +36,7 @@ world.events.tick.subscribe((currentTick) => {
 });
 let getTime = () => {
     try {
-        let timeQuery = parseInt(world.getDimension('overworld').runCommand(`time query daytime`));
+        let timeQuery = parseInt(world.getDimension('overworld').runCommand(`time query daytime`).statusMessage?.match(/-?\d+/)[0]);
         return timeQuery;
     } catch (error) {
         return { error: false, ...error};
@@ -42,7 +44,7 @@ let getTime = () => {
 };
 let isNight = () => {
     try {
-        let timeQuery = parseInt(world.getDimension('overworld').runCommand(`time query daytime`));
+        let timeQuery = parseInt(world.getDimension('overworld').runCommand(`time query daytime`).statusMessage?.match(/-?\d+/)[0]);
         if (timeQuery >= 12542) {
             return true;
         };
@@ -62,7 +64,7 @@ function commands(data) {
     let quotes = data.message.match(/(?<=\").*?(?=\")/g);
     let selector = Array.from(world.getPlayers()).find(sel => {
         sel.nameTag 
-        == 
+            == 
         data.message
                 .match(/(?<=\@).?/)
                 ?.[0]
