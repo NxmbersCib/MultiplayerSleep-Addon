@@ -8,6 +8,7 @@ let prefix = "!";
 world.events.beforeChat.subscribe(data => {
     if (data.message.startsWith(prefix)) { 
         commands(data);
+        data.cancel = true;
     };
 });
 world.events.tick.subscribe(tick => {});
@@ -17,12 +18,11 @@ world.events.tick.subscribe(tick => {});
  * @returns 
  */
 function commands(data) {
-    let command = data.message.match(new RegExp('(?<=' + `\\${prefix}` + ')\\w+'))?.[0].toLowerCase();
+    let command = data.message.match(new RegExp('(' + `\\${prefix}` + ')\\w+'))?.[0].toLowerCase();
     let origin = data.sender;
-    let output = `The command was executed. (${origin.nameTag})`;
     let params = data.message.split(' '); params.splice(0, 1);
     let quotes = data.message.match(/(?<=\").*?(?=\")/g);
-    selector = Array.from(world.getPlayers()).find(sel => {
+    let selector = Array.from(world.getPlayers()).find(sel => {
         sel.nameTag 
         == 
         data.message
@@ -31,24 +31,25 @@ function commands(data) {
                 .replace(/\"/g, '');
     });
     switch (command) {
-        case "sleep": {
+        case `${prefix}sleep`: {
             switch (true) {
                 case !data.sender.hasTag('op') && params[0] == "setplayers": {
-                    world.getDimension('overworld').runCommand(`tellraw "${data.sender.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command}"]}]}`);
+                    origin.runCommand(`tellraw "${data.sender.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command}"]}]}`);
                 } break;
                 case params[0] == "setplayers": {
-                    world.getDimension('overworld').runCommand(`scoreboard players set uopMinPlayers uopmp ${params[1]}`);
+                    origin.runCommand(`scoreboard players set uopMinPlayers uopmp ${params[1]}`);
+                    origin.runCommand(`tellraw @s {"rawtext":[{"translate":"cib.customcommand.succes.sleepsetplayers","with":["${params[0]}"]}]}`);
                 } break;
                 default: {
-                    world.getDimension('overworld').runCommand(`tellraw @a {"rawtext":[{"translate":"commands.generic.syntax","with":["${params[0]}","${command}"]}]}`);
+                    origin.runCommand(`tellraw @s {"rawtext":[{"translate":"commands.generic.syntax","with":["${params[0]}","${command}"]}]}`);
                 } break;
             };
         } break;
-        case "sleeprequest": {
-            world.getDimension('overworld').runCommand(`tellraw @a {"rawtext":[{"translate":"cib.sleep.request","with":["${data.sender.nameTag}"]}]}`);
+        case `${prefix}sleeprequest`: {
+            origin.runCommand(`tellraw @s {"rawtext":[{"translate":"cib.sleep.request","with":["${data.sender.nameTag}"]}]}`);
         } break;
         default: {
-            world.getDimension('overworld').runCommand(`tellraw "${data.sender.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command}"]}]}`);
+            origin.runCommand(`tellraw @s" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command}"]}]}`);
         };
     };
 };
