@@ -1,0 +1,8 @@
+cib.sleep.request=§e%s иска да скача до зори!
+cib.sleep.passed=§aТой прескочи нощта до зори, добро утро.
+cib.customcommand.succes.sleepsetplayers=§aЗадайте минималния брой играчи, които да прекарат нощта при §7%s§a.
+cib.customcommand.succes.sleeptimeadd=§aЗадайте скорост на скачане през нощта на §7%s§6.
+cib.customcommand.missingparam.sleepsetplayers=§cМоля, посочете минимален брой играчи, които да прекарат нощта.
+cib.customcommand.missingparam.sleeptimeadd=§cМоля, посочете брой отметки, които да добавите, докато пропускате нощта.
+cib.customcommand.notanumber.sleeptimeadd=§c Полученият параметър (§7%s)§c не е число. Моля, посочете цяло число.
+chat.type.sleeping=§b%s Той спи в легло... Сладки сънища!

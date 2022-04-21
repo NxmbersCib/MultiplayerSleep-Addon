@@ -1,0 +1,8 @@
+cib.sleep.request=§e%s žádá o skok až do svítání!
+cib.sleep.passed=§aPřeskočil noc až do svítání, dobré ráno.
+cib.customcommand.succes.sleepsetplayers=§aNastavte minimální počet hráčů pro strávení noci na §7%s§a.
+cib.customcommand.succes.sleeptimeadd=§aNastavte rychlost skoku v noci na §7%s§6.
+cib.customcommand.missingparam.sleepsetplayers=§cUveďte prosím minimální počet hráčů, kteří mají strávit noc.
+cib.customcommand.missingparam.sleeptimeadd=§cProsím, určete počet zaškrtnutí, které chcete přidat při přeskakování noci.
+cib.customcommand.notanumber.sleeptimeadd=§cPřijatý parametr (§7%s)§c není číslo. Zadejte celé číslo.
+chat.type.sleeping=§b%s Spí v posteli... Sladké sny!

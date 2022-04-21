@@ -1,0 +1,8 @@
+cib.sleep.request=§e%s просит прыгать до рассвета!
+cib.sleep.passed=§aОн прогулял ночь до рассвета, доброе утро.
+cib.customcommand.succes.sleepsetplayers=§aУстановите минимальное количество игроков, чтобы провести ночь в §7%s§a.
+cib.customcommand.succes.sleeptimeadd=§aУстановите скорость прыжка ночью на §7%s§6.
+cib.customcommand.missingparam.sleepsetplayers=§cУкажите минимальное количество игроков для ночлега.
+cib.customcommand.missingparam.sleeptimeadd=§cПожалуйста, укажите количество галочек, которое нужно добавить при пропуске ночи.
+cib.customcommand.notanumber.sleeptimeadd=§cПолученный параметр (§7%s)§c не является числом. Укажите целое число.
+chat.type.sleeping=§b%s Он спит в постели... Сладких снов!

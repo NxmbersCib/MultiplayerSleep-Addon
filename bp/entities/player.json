@@ -7,12 +7,12 @@
         "is_summonable": false,
         "is_experimental": false,
         "scripts": {
-            "animate": {
-                "sleep": "q.is_sleeping"
-            }
+            "animate": [
+              "sleep"
+            ]
         },
         "animations": {
-            "sleep": "animation.cib.sleeping"
+            "sleep": "controller.animation.cib.sleeping"
         }
       },
   

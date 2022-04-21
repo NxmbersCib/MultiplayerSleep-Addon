@@ -1,0 +1,8 @@
+cib.sleep.request=e%s meminta untuk melompat sampai fajar!
+cib.sleep.passed=aDia melewatkan malam sampai fajar, selamat pagi.
+cib.customcommand.succes.sleepsetplayers=aTetapkan jumlah minimum pemain untuk bermalam di 7%sa.
+cib.customcommand.succes.sleeptimeadd=Setel kecepatan lompatan di malam hari ke 7%s§6.
+cib.customcommand.missingparam.sleepsetplayers=cHarap tentukan jumlah minimum pemain yang akan menginap.
+cib.customcommand.missingparam.sleeptimeadd=cHarap tentukan jumlah centang untuk ditambahkan saat melewatkan malam.
+cib.customcommand.notanumber.sleeptimeadd=cParameter yang diterima (§7%s)§c bukan angka. Harap tentukan bilangan bulat.
+chat.type.sleeping=b%s Dia tidur di ranjang... Mimpi indah!

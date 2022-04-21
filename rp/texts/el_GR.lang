@@ -1,0 +1,8 @@
+cib.sleep.request=Το §e%s ζητά να πηδήξει μέχρι τα ξημερώματα!
+cib.sleep.passed=§aΠήρε τη νύχτα μέχρι τα ξημερώματα, καλημέρα.
+cib.customcommand.succes.sleepsetplayers=§a Ορίστε τον ελάχιστο αριθμό παικτών που θα διανυκτερεύσουν στο §7%s§a.
+cib.customcommand.succes.sleeptimeadd=§a Ρυθμίστε την ταχύτητα άλματος τη νύχτα σε §7%s§6.
+cib.customcommand.missingparam.sleepsetplayers=§cΠροσδιορίστε έναν ελάχιστο αριθμό παικτών για να περάσουν τη νύχτα.
+cib.customcommand.missingparam.sleeptimeadd=§cΠαρακαλούμε καθορίστε έναν αριθμό τικ που θα προσθέσετε ενώ παραλείπετε τη νύχτα.
+cib.customcommand.notanumber.sleeptimeadd=§cΗ ληφθείσα παράμετρος (§7%s)§c δεν είναι αριθμός. Προσδιορίστε έναν ακέραιο αριθμό.
+chat.type.sleeping=§b%s Κοιμάται σε ένα κρεβάτι... Όνειρα γλυκά!

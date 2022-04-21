@@ -1,0 +1,8 @@
+cib.sleep.request=§e%s bittet darum, bis zum Morgengrauen zu springen!
+cib.sleep.passed=§aEr übersprang die Nacht bis zum Morgengrauen, guten Morgen.
+cib.customcommand.succes.sleepsetplayers=§aLegen Sie die Mindestanzahl an Spielern zum Übernachten auf §7%s§a fest.
+cib.customcommand.succes.sleeptimeadd=§aSprunggeschwindigkeit bei Nacht auf §7%s§6 setzen.
+cib.customcommand.missingparam.sleepsetplayers=§cBitte geben Sie eine Mindestanzahl an Spielern für die Übernachtung an.
+cib.customcommand.missingparam.sleeptimeadd=§cBitte geben Sie eine Anzahl von Ticks an, die hinzugefügt werden sollen, während die Nacht übersprungen wird.
+cib.customcommand.notanumber.sleeptimeadd=§cDer empfangene Parameter (§7%s)§c ist keine Zahl. Bitte geben Sie eine Ganzzahl an.
+chat.type.sleeping=§b%s Er schläft in einem Bett... Süße Träume!

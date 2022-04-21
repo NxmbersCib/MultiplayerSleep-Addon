@@ -1,0 +1,22 @@
+{
+    "format_version" : "1.10.0",
+    "animation_controllers" : {
+      "controller.animation.cib.sleeping" : {
+        "initial_state" : "vivo",
+        "states" : {
+          "vivo" : {
+            "transitions" : [
+              { "muerto" : "query.is_sleeping" }
+            ]
+          },
+          "sleeping" : {
+            "on_entry": ["/execute @s ~ ~ ~ scoreboard players add uopsSleepingPlrs uopsdb 1"],
+            "on_exit": ["/execute @s ~ ~ ~ scoreboard players remove uopsSleepingPlrs uopsdb 1"],
+            "transitions" : [
+              { "vivo" : "!query.is_sleeping" }
+            ]
+          }
+        }
+      }
+    }
+  }

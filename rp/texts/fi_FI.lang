@@ -1,0 +1,8 @@
+cib.sleep.request=§e%s pyytää hyppäämään aamunkoittoon asti!
+cib.sleep.passed=§aHän ohitti yön aamunkoittoon, hyvää huomenta.
+cib.customcommand.succes.sleepsetplayers=§aAseta yöpyvien pelaajien vähimmäismäärä kohdassa §7%s§a.
+cib.customcommand.succes.sleeptimeadd=§aAseta hyppynopeudeksi yöllä §7%s§6.
+cib.customcommand.missingparam.sleepsetplayers=§cMääritä yön viettävien pelaajien vähimmäismäärä.
+cib.customcommand.missingparam.sleeptimeadd=§cMääritä joukko punkkeja, jotka lisätään yön ohittamiseen.
+cib.customcommand.notanumber.sleeptimeadd=§cVastaanotettu parametri (§7%s)§c ei ole numero. Määritä kokonaisluku.
+chat.type.sleeping=§b%s Hän nukkuu sängyssä... Kauniita unia!
