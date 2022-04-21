@@ -4,7 +4,7 @@ For more information to authorize your copies, you can contact him on discord: h
 or contact him via Twitter: https://twitter.com/CibNumeritos - Don't share direct download links.
 */
 import { world, BeforeChatEvent } from 'mojang-minecraft';
-world.getDimension('overworld').runCommand(`scoreboard players add uopsdb`);
+world.getDimension('overworld').runCommand(`scoreboard objectives add uopsdb dummy`);
 try {
     world.getDimension('overworld').runCommand(`scoreboard players set uopsMinPlayers uopsdb 1`);
     world.getDimension('overworld').runCommand(`scoreboard players set uopsSleepingPlrs uopsdb 0`);
