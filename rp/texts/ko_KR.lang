@@ -1,8 +1,0 @@
-cib.sleep.passed=§b밤은 새벽까지 건너뛰었습니다, 좋은 아침입니다.
-cib.customcommand.succes.sleepsetplayers=§a§7%s§a에서 하룻밤을 보낼 최소 플레이어 수를 설정합니다.
-cib.customcommand.succes.sleeptimeadd=§a야간 점프 속도를 §7%s§6으로 설정합니다.
-cib.customcommand.missingparam.sleepsetplayers=§c밤을 보낼 최소 플레이어 수를 지정하십시오.
-cib.customcommand.missingparam.sleeptimeadd=§c밤을 건너 뛰는 동안 추가할 틱 수를 지정하십시오.
-cib.customcommand.notanumber=§c받은 매개변수(§7%s§c)는 숫자가 아닙니다. 정수를 지정하십시오.
-cib.customcommand.cannotbezero=§c수신된 매개변수는 0일 수 없습니다. 0보다 큰 값을 지정하십시오.
-chat.type.sleeping=§b%s님이 침대에서 자고 있습니다... 좋은 꿈 꾸세요!

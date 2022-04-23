@@ -1,8 +1,0 @@
-cib.sleep.passed=§b Az éjszaka hajnalig ugrott, jó reggelt.
-cib.customcommand.succes.sleepsetplayers=§aÁllítsa be az éjszakát eltöltő játékosok minimális számát a §7%s§a pontnál.
-cib.customcommand.succes.sleeptimeadd=§aÁllítsa be az éjszakai ugrási sebességet §7%s§6-ra.
-cib.customcommand.missingparam.sleepsetplayers=§cKérjük, adja meg az éjszakát eltöltő játékosok minimális számát.
-cib.customcommand.missingparam.sleeptimeadd=§cKérjük, adjon meg néhány kullancsot, amelyet az éjszaka kihagyásakor hozzáadhat.
-cib.customcommand.notanumber=§cA kapott paraméter (§7%s§c) nem szám. Kérjük, adjon meg egy egész számot.
-cib.customcommand.cannotbezero=§cA kapott paraméter nem lehet 0. Kérjük, adjon meg 0-nál nagyobb értéket.
-chat.type.sleeping=§b%s egy ágyban alszik... Szép álmokat!

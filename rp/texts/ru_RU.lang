@@ -1,8 +1,0 @@
-cib.sleep.passed=§bНочь перескочила к рассвету, доброе утро.
-cib.customcommand.succes.sleepsetplayers=§aУстановите минимальное количество игроков, чтобы провести ночь в §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§aУстановите скорость прыжка ночью на §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§cУкажите минимальное количество игроков для ночлега.
-cib.customcommand.missingparam.sleeptimeadd=§cПожалуйста, укажите количество галочек, которое нужно добавить при пропуске ночи.
-cib.customcommand.notanumber=§cПолученный параметр (§7%s§c) не является числом. Укажите целое число.
-cib.customcommand.cannotbezero=§cПолученный параметр не может быть равен 0. Укажите значение больше 0.
-chat.type.sleeping=§b%s спит в постели... Сладких снов!

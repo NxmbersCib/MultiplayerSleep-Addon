@@ -1,8 +1,0 @@
-cib.sleep.passed=§bNatten har hoppet over til daggry, god morgen.
-cib.customcommand.succes.sleepsetplayers=§aAngi minimum antall spillere som skal overnatte på §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§aSett hopphastigheten om natten til §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§cVennligst spesifiser et minimum antall spillere for å overnatte.
-cib.customcommand.missingparam.sleeptimeadd=§cVennligst spesifiser et antall haker som skal legges til mens du hopper over natten.
-cib.customcommand.notanumber=§cDen mottatte parameteren (§7%s§c) er ikke et tall. Vennligst spesifiser et heltall.
-cib.customcommand.cannotbezero=§cDen mottatte parameteren kan ikke være 0. Vennligst spesifiser en verdi større enn 0.
-chat.type.sleeping=§b%s sover i en seng... Søte drømmer!

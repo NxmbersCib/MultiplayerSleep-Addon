@@ -1,8 +1,0 @@
-cib.sleep.passed=§bYö on väliin aamunkoittoon asti, hyvää huomenta.
-cib.customcommand.succes.sleepsetplayers=§aAseta yöpyvien pelaajien vähimmäismäärä kohdassa §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§aAseta hyppynopeudeksi yöllä §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§cMääritä yön viettävien pelaajien vähimmäismäärä.
-cib.customcommand.missingparam.sleeptimeadd=§cMääritä joukko punkkeja, jotka lisätään yön ohittamiseen.
-cib.customcommand.notanumber=§cVastaanotettu parametri (§7%s§c) ei ole numero. Määritä kokonaisluku.
-cib.customcommand.cannotbezero=§cVastaanotettu parametri ei voi olla 0. Määritä arvo, joka on suurempi kuin 0.
-chat.type.sleeping=§b%s nukkuu sängyssä... Kauniita unia!

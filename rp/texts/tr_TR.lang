@@ -1,8 +1,0 @@
-cib.sleep.passed=§bGece şafağa kadar atladı, günaydın.
-cib.customcommand.succes.sleepsetplayers=§Geceyi geçirmek için minimum oyuncu sayısını §7%s§a olarak ayarlayın.
-cib.customcommand.succes.sleeptimeadd=§Gece atlama hızını §7s§6 olarak ayarlayın.
-cib.customcommand.missingparam.sleepsetplayers=§cLütfen geceyi geçirmek için minimum oyuncu sayısını belirtin.
-cib.customcommand.missingparam.sleeptimeadd=§cLütfen geceyi atlarken eklemek istediğiniz tik sayısını belirtin.
-cib.customcommand.notanumber=§cAlınan parametre (§7%s§c) bir sayı değil. Lütfen bir tamsayı belirtin.
-cib.customcommand.cannotbezero=§cAlınan parametre 0 olamaz. Lütfen 0'dan büyük bir değer belirtin.
-chat.type.sleeping=§b%s bir yatakta uyuyor... Tatlı rüyalar!

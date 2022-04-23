@@ -1,8 +1,0 @@
-cib.sleep.passed=§b De nacht is overgeslagen tot het ochtendgloren, goedemorgen.
-cib.customcommand.succes.sleepsetplayers=§aStel het minimum aantal spelers in om de nacht door te brengen op §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§aStel de sprongsnelheid 's nachts in op §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§cGeef een minimum aantal spelers op om de nacht door te brengen.
-cib.customcommand.missingparam.sleeptimeadd=§cGeef een aantal vinkjes op om toe te voegen tijdens het overslaan van de nacht.
-cib.customcommand.notanumber=§cDe ontvangen parameter (§7%s§c) is geen getal. Geef een geheel getal op.
-cib.customcommand.cannotbezero=§cDe ontvangen parameter kan niet 0 zijn. Geef een waarde op die groter is dan 0.
-chat.type.sleeping=§b%s slaapt in een bed... Zoete dromen!

@@ -1,8 +1,0 @@
-cib.sleep.passed=§bNoc preskočila až do rána, dobré ráno.
-cib.customcommand.succes.sleepsetplayers=§aNastavte minimálny počet hráčov na prenocovanie na §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§aNastavte rýchlosť skoku v noci na §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§cUveďte minimálny počet hráčov, ktorí majú stráviť noc.
-cib.customcommand.missingparam.sleeptimeadd=§cProsím, zadajte počet začiarknutí, ktoré sa majú pridať pri preskakovaní noci.
-cib.customcommand.notanumber=§cPrijatý parameter (§7%s§c) nie je číslo. Zadajte celé číslo.
-cib.customcommand.cannotbezero=§cPrijatý parameter nemôže byť 0. Zadajte hodnotu väčšiu ako 0.
-chat.type.sleeping=§b%s spí v posteli... Sladké sny!

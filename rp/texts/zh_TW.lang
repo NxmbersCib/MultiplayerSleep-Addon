@@ -1,8 +1,0 @@
-cib.sleep.passed=§b夜幕降临，直到黎明，早上好。
-cib.customcommand.succes.sleepsetplayers=§a设置在§7%s§a过夜的最少玩家人数。
-cib.customcommand.succes.sleeptimeadd=§a将夜间跳跃速度设置为§7%s§6。
-cib.customcommand.missingparam.sleepsetplayers=§c请指定过夜的最少玩家人数。
-cib.customcommand.missingparam.sleeptimeadd=§c请指定跳过夜晚时要添加的刻度数。
-cib.customcommand.notanumber=§c接收到的参数（§7%s§c）不是数字。请指定一个整数。
-cib.customcommand.cannotbezero=§c接收的参数不能为0。请指定一个大于0的值。
-chat.type.sleeping=§b%s 睡在床上……好梦！
