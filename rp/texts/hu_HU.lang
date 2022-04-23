@@ -1,0 +1,11 @@
+cib.sleep.passed=§b Az éjszaka vége, jó reggelt.
+cib.customcommand.succes.help=§eElérhető parancsok: §a%2§r: §7Súgó az egyéni parancsokhoz. %1§b(csak OP) §a%3§r:§7 Kiegészítő beállítások kezelője.%1Írja be a %2 <Command> parancsot, hogy segítséget kapjon egy adott parancshoz.
+cib.customcommand.succes.help.sleep=§c(Csak OP)§e Alvó parancs: %1§7Konfigurációkezelő hozzáadása. %1§eParaméterek: %1 §aminplayers§r:§7 Az éjszakát eltöltő játékosok minimális száma. %1 §etimeadd§r: §7 Az éjszaka kihagyásának sebessége.
+cib.customcommand.succes.help.help=§eHelp parancs: %1§7Segítség kérése egyéni parancsokhoz.
+cib.customcommand.succes.sleepsetplayers=§aÁllítsa be az éjszakát eltöltő játékosok minimális számát a §7%s§a pontnál.
+cib.customcommand.succes.sleeptimeadd=§aÁllítsa be az éjszakai ugrási sebességet §7%s§6-ra.
+cib.customcommand.missingparam.sleepsetplayers=§aAz éjszakát eltöltő játékosok minimális száma §7%s§a.
+cib.customcommand.missingparam.sleeptimeadd=§aAz éjszaka kihagyása mellett hozzáadható kullancsok száma §7%s§a.
+cib.customcommand.notanumber=§cA kapott paraméter (§7%s§c) nem szám. Kérjük, adjon meg egy egész számot.
+cib.customcommand.cannotbezero=§cA kapott paraméter nem lehet 0. Kérjük, adjon meg 0-nál nagyobb értéket.
+chat.type.sleeping=§b%s egy ágyban alszik... Szép álmokat!

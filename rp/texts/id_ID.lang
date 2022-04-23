@@ -1,0 +1,11 @@
+cib.sleep.passed=bMalam telah usai, selamat pagi.
+cib.customcommand.succes.help=ePerintah yang tersedia: a%2§r: 7Bantuan dengan perintah khusus. %1§b(OP Only) a%3§r:§7 Addon Settings Manager.%1Ketik %2 <Command> untuk mendapatkan bantuan pada perintah tertentu.
+cib.customcommand.succes.help.sleep=c(Only OP)§e Perintah Tidur: %1§7Pengelola konfigurasi tambahan. %1§eParameters: %1 aminplayers§r:§7 Jumlah minimum pemain untuk bermalam. %1 etimeadd§r: 7Kecepatan di mana malam dilewati.
+cib.customcommand.succes.help.help=Perintah eHelp: %1§7Dapatkan bantuan dengan perintah khusus.
+cib.customcommand.succes.sleepsetplayers=aTetapkan jumlah minimum pemain untuk bermalam di 7%sa.
+cib.customcommand.succes.sleeptimeadd=Setel kecepatan lompatan di malam hari ke 7%s§6.
+cib.customcommand.missingparam.sleepsetplayers=aJumlah minimum pemain untuk bermalam adalah 7%s§a.
+cib.customcommand.missingparam.sleeptimeadd=aJumlah tick yang ditambahkan saat melewatkan malam adalah 7%s§a.
+cib.customcommand.notanumber=cParameter yang diterima (§7%s§c) bukan angka. Harap tentukan bilangan bulat.
+cib.customcommand.cannotbezero=cParameter yang diterima tidak boleh 0. Harap tentukan nilai yang lebih besar dari 0.
+chat.type.sleeping=b%s sedang tidur di ranjang... Mimpi indah!

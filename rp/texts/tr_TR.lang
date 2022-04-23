@@ -1,0 +1,11 @@
+cib.sleep.passed=§bGece bitti, günaydın.
+cib.customcommand.succes.help=§eMevcut komutlar: §a%2§r: §7Özel komutlarla yardım. %1§b(Yalnızca OP) §a%3§r:§7 Eklenti Ayarları Yöneticisi.%1Belirli bir komutla ilgili yardım almak için %2 <Command> yazın.
+cib.customcommand.succes.help.sleep=§c(Yalnızca OP)§e Uyku komutu: %1§7Addon yapılandırma yöneticisi. %1§eParameters: %1 §aminplayers§r:§7 Geceyi geçirecek minimum oyuncu sayısı. %1 §etimeadd§r: §7 ​Gecenin atlandığı hız.
+cib.customcommand.succes.help.help=§eYardım komutu: %1§7Özel komutlarla ilgili yardım alın.
+cib.customcommand.succes.sleepsetplayers=§Geceyi geçirmek için minimum oyuncu sayısını §7%s§a olarak ayarlayın.
+cib.customcommand.succes.sleeptimeadd=§Gece atlama hızını §7s§6 olarak ayarlayın.
+cib.customcommand.missingparam.sleepsetplayers=§aGeceyi geçirecek minimum oyuncu sayısı §7s§a'dır.
+cib.customcommand.missingparam.sleeptimeadd=§aGeceyi atlarken eklenecek tik miktarı §%7s§a'dır.
+cib.customcommand.notanumber=§cAlınan parametre (§7%s§c) bir sayı değil. Lütfen bir tamsayı belirtin.
+cib.customcommand.cannotbezero=§cAlınan parametre 0 olamaz. Lütfen 0'dan büyük bir değer belirtin.
+chat.type.sleeping=§b%s bir yatakta uyuyor... Tatlı rüyalar!

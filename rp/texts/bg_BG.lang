@@ -1,0 +1,11 @@
+cib.sleep.passed=§bНощта свърши, добро утро.
+cib.customcommand.succes.help=§eНалични команди: §a%2§r: §7Помощ за персонализирани команди. %1§b(само за OP) §a%3§r:§7 Мениджър на настройките на добавките.%1Въведете %2 <Команда>, за да получите помощ за конкретна команда.
+cib.customcommand.succes.help.sleep=§c(Само OP)§e Команда за заспиване: %1§7 Мениджър на конфигурацията на добавки. %1§eПараметри: %1 §aminplayers§r:§7 Минимален брой играчи, които да прекарат нощта. %1 §etimeadd§r: §7Скорост, при която нощта се пропуска.
+cib.customcommand.succes.help.help=§eHelp команда: %1§7Получете помощ с персонализирани команди.
+cib.customcommand.succes.sleepsetplayers=§aЗадайте минималния брой играчи, които да прекарат нощта при §7%s§a.
+cib.customcommand.succes.sleeptimeadd=§aЗадайте скорост на скачане през нощта на §7%s§6.
+cib.customcommand.missingparam.sleepsetplayers=§aМинималният брой играчи за нощуване е §7%s§a.
+cib.customcommand.missingparam.sleeptimeadd=§a Количеството кърлежи за добавяне при пропускане на нощта е §7%s§a.
+cib.customcommand.notanumber=§c Полученият параметър (§7%s§c) не е число. Моля, посочете цяло число.
+cib.customcommand.cannotbezero=§c Полученият параметър не може да бъде 0. Моля, посочете стойност, по-голяма от 0.
+chat.type.sleeping=§b%s спи в легло... Сладки сънища!

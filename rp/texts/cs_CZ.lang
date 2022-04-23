@@ -1,0 +1,11 @@
+cib.sleep.passed=§bNoc skončila, dobré ráno.
+cib.customcommand.succes.help=§eDostupné příkazy: §a%2§r: §7Nápověda s vlastními příkazy. %1§b(Pouze OP) §a%3§r:§7 Správce nastavení doplňků.%1Zadáním %2 <Příkaz> získáte nápovědu ke konkrétnímu příkazu.
+cib.customcommand.succes.help.sleep=§c(Pouze OP)§e Příkaz spánku: %1§7Správce konfigurace doplňků. %1§eParametry: %1 §aminplayers§r:§7 Minimální počet hráčů pro strávení noci. %1 §etimeadd§r: §7Rychlost, při které je noc vynechána.
+cib.customcommand.succes.help.help=§ePříkaz nápovědy: %1§7Získejte pomoc s vlastními příkazy.
+cib.customcommand.succes.sleepsetplayers=§aNastavte minimální počet hráčů pro strávení noci na §7%s§a.
+cib.customcommand.succes.sleeptimeadd=§aNastavte rychlost skoku v noci na §7%s§6.
+cib.customcommand.missingparam.sleepsetplayers=§aMinimální počet hráčů na přenocování je §7%s§a.
+cib.customcommand.missingparam.sleeptimeadd=§aPočet zaškrtnutí, které je třeba přidat při vynechání noci, je §7%s§a.
+cib.customcommand.notanumber=§cPřijatý parametr (§7%s§c) není číslo. Zadejte celé číslo.
+cib.customcommand.cannotbezero=§cPřijatý parametr nemůže být 0. Zadejte prosím hodnotu větší než 0.
+chat.type.sleeping=§b%s spí v posteli... Sladké sny!

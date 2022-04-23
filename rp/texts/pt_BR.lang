@@ -1,0 +1,11 @@
+cib.sleep.passed=§bA noite acabou, bom dia.
+cib.customcommand.succes.help=§eComandos disponíveis: §a%2§r: §7Ajuda com comandos personalizados. %1§b(Somente OP) §a%3§r:§7 Gerenciador de configurações de complemento.%1Digite %2 <Command> para obter ajuda em um comando específico.
+cib.customcommand.succes.help.sleep=§c(Somente OP)§e Comando de suspensão: %1§7Gerenciador de configuração de complementos. %1§eParâmetros: %1 §aminplayers§r:§7 Número mínimo de jogadores para passar a noite. %1 §etimeadd§r: §7Velocidade na qual a noite é ignorada.
+cib.customcommand.succes.help.help=Comando §eHelp: %1§7Obtenha ajuda com comandos personalizados.
+cib.customcommand.succes.sleepsetplayers=§aDefina o número mínimo de jogadores para passar a noite em §7%s§a.
+cib.customcommand.succes.sleeptimeadd=§aDefina a velocidade de salto à noite para §7%s§6.
+cib.customcommand.missingparam.sleepsetplayers=§aO número mínimo de jogadores para passar a noite é §7%s§a.
+cib.customcommand.missingparam.sleeptimeadd=§aA quantidade de ticks a serem adicionados ao pular a noite é §7%s§a.
+cib.customcommand.notanumber=§cO parâmetro recebido (§7%s§c) não é um número. Especifique um número inteiro.
+cib.customcommand.cannotbezero=§cO parâmetro recebido não pode ser 0. Especifique um valor maior que 0.
+chat.type.sleeping=§b%s está dormindo em uma cama... Bons sonhos!
