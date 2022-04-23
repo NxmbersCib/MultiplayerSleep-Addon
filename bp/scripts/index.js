@@ -1,6 +1,7 @@
 /* 
-This file belongs to: "@CibNumeritos" (Eternetic Studios), any unauthorized modification or change will be penalized, please don't upload any modded version of this pack.
-For more information to authorize your copies, you can contact him on discord: https://discord.gg/b39ncqJQWU 
+This file belongs to: "@CibNumeritos", any unauthorized modification or change will be penalized, please don't upload any modded version of this pack.
+You can create forks on the github page of the addon: https://github.com/CibNumeritos/Ultimate-OnePlayerSleep.
+For more information to authorize your copies, you can contact him on discord: CibNumeritos#4239
 or contact him via Twitter: https://twitter.com/CibNumeritos - Don't share direct download links.
 */
 import { world, BeforeChatEvent } from 'mojang-minecraft';
@@ -8,8 +9,6 @@ let minPlayers;
 let sleepingPlayers;
 let timeAdd;
 let prefix = "!";
-// AÑADE !HELP
-// HAZ QUE SI NO HAY PÁRAMETRO DE NUMEROS EN LOS TIMEADD Y SETPLAYERS (CAMBIA SERPLAYERS A MINPLAYERS) MUESTRE EL VALOR ACTUAL DE ESA VARIABLE.
 try {
     world.getDimension('overworld').runCommand(`scoreboard objectives add uopsdb dummy`);
     minPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage.match(/-?\d+/)[0]);
@@ -20,7 +19,7 @@ try {
     world.getDimension('overworld').runCommand(`scoreboard players set uopsSleepingPlrs uopsdb 0`);
     world.getDimension('overworld').runCommand(`scoreboard players set uopsTimeAdd uopsdb 50`);
 };
-function runCommand(cmd, dim = 'overworld') {
+let runCommand = (cmd, dim = 'overworld') => {
     try {
         return { error: false, ...world.getDimension(dim).runCommand(cmd) };
     } catch (error) {
@@ -80,17 +79,36 @@ function commands(data) {
                 .replace(/\"/g, '');
     });
     switch (true) {
-        case command == `${prefix}sleep` || command == `${prefix}s`: {
+        case command == `${prefix}help` || command == `${prefix}h`: {
+            switch (true) {
+                case params?.[0] == sleep: {
+                    let s1 = `\n`;
+                    runCommand(`tellraw "${origin.nameTag}}" {"rawtext":[{"translate":"cib.commands.succes.help.sleep","wih":["${s1}"]}]}`);
+                } break;
+                case params?.[0] == help: {
+                    let s = `\n`;
+                    runCommand(`tellraw "${origin.nameTag}}" {"rawtext":[{"translate":"cib.commands.succes.help.help","wih":["${s1}"]}]}`);
+                } break;
+                default: {
+                    let s1 = `\n`, s2 = `${prefix}help / ${prefix}h\n`, s3 = `${prefix}sleep / ${prefix}s`;
+                    runCommand(`tellraw "${origin.nameTag}}" {"":[{"translate":"cib.commands.succes.help","wih":["${s1}", "${s2}", "${s3}"]}]}`);
+                } break;
+            };
+        } break;
+        case !origin.hasTag('op') && command == `${prefix}sleep` || !origin.hasTag('op') && command == `${prefix}s`: {
+            runCommand(`tellraw "${origin.nameTag}"" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command.substring(prefix.length)}"]}]}`);
+        } break;
+        case origin.hasTag('op') && command == `${prefix}sleep` || origin.hasTag('op') && command == `${prefix}s`: {
             data.cancel = true;
             switch (true) {
-                case !data.sender.hasTag('op') && params[0] == "setplayers": {
-                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.syntax","with":["${params[0]}","${command}"]}]}`);
+                case !origin.hasTag('op') && params[0] == "setplayers": {
+                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.syntax","with":["${command.substring(prefix.length)}","${params[0]}"]}]}`);
                 } break;
-                case params[0] == "setplayers": {
+                case params[0] == "minplayers" || params[0] == "mp": {
                     let check = parseInt(params?.[1], 10);
                     switch (true) {
                         case !params[1]: {
-                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.missingparam.sleepsetplayers"}]}`);
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.missingparam.sleepminplayers","with":["${minPlayers}"]}]}`);
                         } break;
                         case isNaN(check): {
                             runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.notanumber","with":["${params[1]}"]}]}`);
@@ -100,16 +118,15 @@ function commands(data) {
                         } break;
                         default: {
                             runCommand(`scoreboard players set uopsMinPlayers uopsdb ${check}`);
-                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.succes.sleepsetplayers","with":["${params[1]}"]}]}`);
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.succes.sleepminplayers","with":["${params[1]}"]}]}`);
                         } break;
                     };
                 } break;
-                case params[0] == "timeadd": {
+                case params[0] == "timeadd" || params[0] == "ta": {
                     let check = parseInt(params?.[1], 10);
-                    console.warn(check)
                     switch (true) {
                         case !params[1]: {
-                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.missingparam.sleeptimeadd"}]}`);
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.missingparam.sleeptimeadd","with":["${timeAdd}"]}]}`);
                         } break;
                         case isNaN(check): {
                             runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.notanumber","with":["${params[1]}"]}]}`);
@@ -124,17 +141,18 @@ function commands(data) {
                     };
                 } break;
                 default: {
-                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.syntax","with":["${params[0]}","${command}"]}]}`);
+                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.syntax","with":["${command.substring(prefix.length)}","${params[0]}"]}]}`);
                 } break;
             };
         } break;
         default: {
-            runCommand(`tellraw "${origin.nameTag}"" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command}"]}]}`);
-        };
+            runCommand(`tellraw "${origin.nameTag}"" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command.substring(prefix.length)}"]}]}`);
+        } break;
     };
 };
 /* 
-Este archivo pertenece a: "@CibNumeritos" (Eternetic Studios), cualquier modificacion o cambio no autorizado sera penalizado, por favor no suba ninguna version modificada del addon.
-Para mas informacion de autorizar tus copias, puedes contactarlo en discord: https://discord.gg/b39ncqJQWU 
+Este archivo pertenece a: "@CibNumeritos", cualquier modificacion o cambio no autorizado sera penalizado, por favor no suba ninguna version modificada del addon.
+Puede crear forks en la pagina de github del addon: https://github.com/CibNumeritos/Ultimate-OnePlayerSleep,
+Para mas informacion de autorizar tus copias, puedes contactarlo en discord: CibNumeritos#4239
 o contactarlo via Twitter: https://twitter.com/CibNumeritos - No comparta links de descarga directos.
 */
