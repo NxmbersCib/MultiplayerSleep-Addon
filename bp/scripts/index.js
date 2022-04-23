@@ -86,7 +86,7 @@ function commands(data) {
                     runCommand(`tellraw "${origin.nameTag}}" {"rawtext":[{"translate":"cib.commands.succes.help.sleep","wih":["${s1}"]}]}`);
                 } break;
                 case params?.[0] == help: {
-                    let s = `\n`;
+                    let s1 = `\n`;
                     runCommand(`tellraw "${origin.nameTag}}" {"rawtext":[{"translate":"cib.commands.succes.help.help","wih":["${s1}"]}]}`);
                 } break;
                 default: {
