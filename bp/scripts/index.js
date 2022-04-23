@@ -8,6 +8,8 @@ let minPlayers;
 let sleepingPlayers;
 let timeAdd;
 let prefix = "!";
+// AÑADE !HELP
+// HAZ QUE SI NO HAY PÁRAMETRO DE NUMEROS EN LOS TIMEADD Y SETPLAYERS (CAMBIA SERPLAYERS A MINPLAYERS) MUESTRE EL VALOR ACTUAL DE ESA VARIABLE.
 try {
     world.getDimension('overworld').runCommand(`scoreboard objectives add uopsdb dummy`);
     minPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage.match(/-?\d+/)[0]);
@@ -18,19 +20,28 @@ try {
     world.getDimension('overworld').runCommand(`scoreboard players set uopsSleepingPlrs uopsdb 0`);
     world.getDimension('overworld').runCommand(`scoreboard players set uopsTimeAdd uopsdb 50`);
 };
+function runCommand(cmd, dim = 'overworld') {
+    try {
+        return { error: false, ...world.getDimension(dim).runCommand(cmd) };
+    } catch (error) {
+        return { error: true, ...error };  
+    };
+};
 world.events.beforeChat.subscribe(data => {
     if (data.message.startsWith(prefix)) { 
         commands(data);
-        data.cancel = true;
     };
 });
 world.events.tick.subscribe((currentTick) => {
-    minPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
-    sleepingPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsSleepingPlrs uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
-    timeAdd = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
+    minPlayers = parseInt(runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
+    sleepingPlayers = parseInt(runCommand(`scoreboard players test uopsSleepingPlrs uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
+    timeAdd = parseInt(runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
     if (isNight() && sleepingPlayers >= minPlayers) {
         if (currentTick % 20 === 10) {
             world.getDimension('overworld').runCommand(`time add ${timeAdd}`);
+            if (getTime() == 23500) {
+                return runCommand(`tellraw @a {"rawtext":[{"translate":"cib.sleep.passed"}]}`);
+            };
         };
     };
 });
@@ -72,42 +83,55 @@ function commands(data) {
     });
     switch (true) {
         case command == `${prefix}sleep` || command == `${prefix}s`: {
+            data.cancel = true;
             switch (true) {
                 case !data.sender.hasTag('op') && params[0] == "setplayers": {
-                    origin.runCommand(`tellraw @s {"rawtext":[{"translate":"commands.generic.syntax","with":["${params[0]}","${command}"]}]}`);
+                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.syntax","with":["${params[0]}","${command}"]}]}`);
                 } break;
                 case params[0] == "setplayers": {
-                    if (!params[0]) {
-                        return origin.runCommand(`tellraw @s {"rawtext":[{"translate":"cib.customcommand.missingparam.sleepsetplayers","with":[""]}]}`);
-                    };
-                    origin.runCommand(`scoreboard players set uopsMinPlayers uopsdb ${params[1]}`);
-                    origin.runCommand(`tellraw @s {"rawtext":[{"translate":"cib.customcommand.succes.sleepsetplayers","with":["${params[0]}"]}]}`);
-                } break;
-                case params[0] == "timeadd": {
-                    let check = parseInt(params?.[0]);
+                    let check = parseInt(params?.[1], 10);
                     switch (true) {
-                        case !params[0]: {
-                            origin.runCommand(`tellraw @s {"rawtext":[{"translate":"cib.customcommand.missingparam.sleeptimeadd","with":[""]}]}`);
+                        case !params[1]: {
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.missingparam.sleepsetplayers"}]}`);
                         } break;
-                        case check == NaN: {
-                            origin.runCommand(`tellraw @s {"rawtext":[{"translate":"cib.customcommand.notanumber.sleeptimeadd","with":["${params[0]}"]}]}`);
+                        case isNaN(check): {
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.notanumber","with":["${params[1]}"]}]}`);
+                        } break;
+                        case check == 0: {
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.cannotbezero","with":["${params[1]}"]}]}`);
                         } break;
                         default: {
-                            origin.runCommand(`scoreboard players set uopsTimeAdd uopsdb ${check}`);
-                            origin.runCommand(`tellraw @s {"rawtext":[{"translate":"cib.customcommand.succes.sleeptimeadd","with":["${check}"]}]}`);
+                            runCommand(`scoreboard players set uopsMinPlayers uopsdb ${check}`);
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.succes.sleepsetplayers","with":["${params[1]}"]}]}`);
+                        } break;
+                    };
+                } break;
+                case params[0] == "timeadd": {
+                    let check = parseInt(params?.[1], 10);
+                    console.warn(check)
+                    switch (true) {
+                        case !params[1]: {
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.missingparam.sleeptimeadd"}]}`);
+                        } break;
+                        case isNaN(check): {
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.notanumber","with":["${params[1]}"]}]}`);
+                        } break;
+                        case check == 0: {
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.cannotbezero","with":["${params[1]}"]}]}`);
+                        } break;
+                        default: {
+                            runCommand(`scoreboard players set uopsTimeAdd uopsdb ${check}`);
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.succes.sleeptimeadd","with":["${check}"]}]}`);
                         } break;
                     };
                 } break;
                 default: {
-                    origin.runCommand(`tellraw @s {"rawtext":[{"translate":"commands.generic.syntax","with":["${params[0]}","${command}"]}]}`);
+                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.syntax","with":["${params[0]}","${command}"]}]}`);
                 } break;
             };
         } break;
-        case command == `${prefix}sleeprequest` || command == `${prefix}sr`: {
-            origin.runCommand(`tellraw @s {"rawtext":[{"translate":"cib.sleep.request","with":["${data.sender.nameTag}"]}]}`);
-        } break;
         default: {
-            origin.runCommand(`tellraw @s" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command}"]}]}`);
+            runCommand(`tellraw "${origin.nameTag}"" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command}"]}]}`);
         };
     };
 };
