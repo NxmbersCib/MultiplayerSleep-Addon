@@ -12,11 +12,9 @@ let prefix = "!";
 try {
     world.getDimension('overworld').runCommand(`scoreboard objectives add uopsdb dummy`);
     minPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage.match(/-?\d+/)[0]);
-    sleepingPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsSleepingPlrs uopsdb * *`).statusMessage.match(/-?\d+/)[0]);
     timeAdd = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`).statusMessage.match(/-?\d+/)[0]);
 } catch (error) {
     world.getDimension('overworld').runCommand(`scoreboard players set uopsMinPlayers uopsdb 1`);
-    world.getDimension('overworld').runCommand(`scoreboard players set uopsSleepingPlrs uopsdb 0`);
     world.getDimension('overworld').runCommand(`scoreboard players set uopsTimeAdd uopsdb 50`);
 };
 let runCommand = (cmd, dim = 'overworld') => {
@@ -26,14 +24,40 @@ let runCommand = (cmd, dim = 'overworld') => {
         return { error: true, ...error };  
     };
 };
+let sleepingPlayersUpdate = () => {
+    for (const p of world.getPlayers()) {
+        switch (true) {
+            case !runCommand(`execute "${p.nameTag}" ~ ~ ~ testforblock ~ ~-1 ~ bed 12`).error: {
+                p.addTag('{IsSleeping}');
+            } break;
+            case !runCommand(`execute "${p.nameTag}" ~ ~ ~ testforblock ~ ~-1 ~ bed 13`).error: {
+                p.addTag('{IsSleeping}');
+            } break;
+            case !runCommand(`execute "${p.nameTag}" ~ ~ ~ testforblock ~ ~-1 ~ bed 14`).error: {
+                p.addTag('{IsSleeping}');
+            } break;
+            case !runCommand(`execute "${p.nameTag}" ~ ~ ~ testforblock ~ ~-1 ~ bed 15`).error: {
+                p.addTag('{IsSleeping}');
+            } break;
+            default: {
+                p.removeTag('{IsSleeping}');
+            } break;
+        };
+    };
+    try {
+        sleepingPlayers = world.getDimension('overworld').runCommand(`testfor @a[tag="{IsSleeping}"]`)?.victim.length;
+    } catch (error) {
+        sleepingPlayers = 0;
+    };
+};
 world.events.beforeChat.subscribe(data => {
     if (data.message.startsWith(prefix)) { 
         commands(data);
     };
 });
 world.events.tick.subscribe((currentTick) => {
+    sleepingPlayersUpdate();
     minPlayers = parseInt(runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
-    sleepingPlayers = parseInt(runCommand(`scoreboard players test uopsSleepingPlrs uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
     timeAdd = parseInt(runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
     if (isNight() && sleepingPlayers >= minPlayers) {
         world.getDimension('overworld').runCommand(`time add ${timeAdd}`);
@@ -60,11 +84,6 @@ let isNight = () => {
         return { error: false, ...error };
     };
 };
-/**
- * 
- * @param {BeforeChatEvent} data 
- * @returns 
- */
 function commands(data) {
     let command = data.message.match(new RegExp('(' + `\\${prefix}` + ')\\w+'))?.[0].toLowerCase();
     let origin = data.sender;
@@ -146,7 +165,7 @@ function commands(data) {
             };
         } break;
         default: {
-            runCommand(`tellraw "${origin.nameTag}"" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command.substring(prefix.length)}"]}]}`);
+            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command.substring(prefix.length)}"]}]}`);
         } break;
     };
 };
