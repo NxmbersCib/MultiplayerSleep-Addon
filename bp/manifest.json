@@ -2,7 +2,7 @@
     "format_version": 2,
     "header": {
         "name": "§aUltimate One Player Sleep",
-        "description": "§o§bA powerfull one player sleep addon\n§r§aBy @CibNumeritos (Eternetic Studios).§r\n§6Join my discord for addon help: https://discord.gg/b39ncqJQWU",
+        "description": "§o§bA powerfull one player sleep addon\n§r§aBy @CibNumeritos#4239.",
         "uuid": "a2b76452-e6c8-4982-92f5-755906c19458",
         "version": [ 1, 0, 0 ],
         "min_engine_version": [ 1, 18, 10 ]
