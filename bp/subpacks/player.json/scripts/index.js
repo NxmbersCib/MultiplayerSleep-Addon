@@ -68,7 +68,8 @@ let isNight = () => {
 function commands(data) {
     let command = data.message.match(new RegExp('(' + `\\${prefix}` + ')\\w+'))?.[0].toLowerCase();
     let origin = data.sender;
-    let params = data.message.split(' '); params.splice(0, 1);
+    let params = data.message.split(' '); 
+    params.splice(0, 1);
     let quotes = data.message.match(/(?<=\").*?(?=\")/g);
     let selector = Array.from(world.getPlayers()).find(sel => {
         sel.nameTag 
