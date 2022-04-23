@@ -37,11 +37,9 @@ world.events.tick.subscribe((currentTick) => {
     sleepingPlayers = parseInt(runCommand(`scoreboard players test uopsSleepingPlrs uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
     timeAdd = parseInt(runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
     if (isNight() && sleepingPlayers >= minPlayers) {
-        if (currentTick % 20 === 10) {
-            world.getDimension('overworld').runCommand(`time add ${timeAdd}`);
-            if (getTime() == 23500) {
-                return runCommand(`tellraw @a {"rawtext":[{"translate":"cib.sleep.passed"}]}`);
-            };
+        world.getDimension('overworld').runCommand(`time add ${timeAdd}`);
+        if (getTime() == 23500) {
+            return runCommand(`tellraw @a {"rawtext":[{"translate":"cib.sleep.passed"}]}`);
         };
     };
 });
