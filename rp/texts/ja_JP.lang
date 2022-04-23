@@ -1,8 +1,8 @@
-cib.sleep.request=§e％sは夜明けまでジャンプするように求めています！
-cib.sleep.passed=§a彼は夜明けまで夜をスキップしました、おはようございます。
+cib.sleep.passed=§b夜は夜明けまでスキップされました、おはようございます。
 cib.customcommand.succes.sleepsetplayers=§a§7％s§aで夜を過ごすためのプレーヤーの最小数を設定します。
 cib.customcommand.succes.sleeptimeadd=§a夜間のジャンプ速度を§7％s§6に設定します。
 cib.customcommand.missingparam.sleepsetplayers=§c夜を過ごすためのプレーヤーの最小数を指定してください。
 cib.customcommand.missingparam.sleeptimeadd=§c夜をスキップするときに追加するティック数を指定してください。
-cib.customcommand.notanumber.sleeptimeadd=§c受信したパラメータ（§7％s）§cは数値ではありません。整数を指定してください。
-chat.type.sleeping=§b％s彼はベッドで寝ています...甘い夢！
+cib.customcommand.notanumber=§c受信したパラメーター（§7％s§c）は数値ではありません。整数を指定してください。
+cib.customcommand.cannotbezero=§c受信したパラメータを0にすることはできません。0より大きい値を指定してください。
+chat.type.sleeping=§b％sはベッドで寝ています...甘い夢！

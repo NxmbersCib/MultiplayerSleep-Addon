@@ -1,8 +1,8 @@
-cib.sleep.request=§e%s просить стрибати до світанку!
-cib.sleep.passed=§aВін пропустив ніч до світанку, доброго ранку.
+cib.sleep.passed=§bНіч проскочила до світанку, доброго ранку.
 cib.customcommand.succes.sleepsetplayers=§aВстановіть мінімальну кількість гравців, які переночують у §7%s§a.
 cib.customcommand.succes.sleeptimeadd=§aВстановіть швидкість стрибка вночі на §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§c Будь ласка, вкажіть мінімальну кількість гравців для ночівлі.
+cib.customcommand.missingparam.sleepsetplayers=§cУкажіть мінімальну кількість гравців, які будуть переночувати.
 cib.customcommand.missingparam.sleeptimeadd=§cУкажіть кількість галок, які потрібно додати, пропускаючи ніч.
-cib.customcommand.notanumber.sleeptimeadd=§cОтриманий параметр (§7%s)§c не є числом. Будь ласка, вкажіть ціле число.
-chat.type.sleeping=§b%s Він спить у ліжку... Солодких снів!
+cib.customcommand.notanumber=§cОтриманий параметр (§7%s§c) не є числом. Будь ласка, вкажіть ціле число.
+cib.customcommand.cannotbezero=§cОтриманий параметр не може бути 0. Будь ласка, вкажіть значення більше 0.
+chat.type.sleeping=§b%s спить у ліжку... Солодких снів!

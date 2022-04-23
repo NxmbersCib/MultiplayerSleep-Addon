@@ -1,8 +1,8 @@
-cib.sleep.request=§e%s está pedindo para pular até o amanhecer!
-cib.sleep.passed=§aEle pulou a noite até o amanhecer, bom dia.
+cib.sleep.passed=§bA noite saltou até o amanhecer, bom dia.
 cib.customcommand.succes.sleepsetplayers=§aDefina o número mínimo de jogadores para passar a noite em §7%s§a.
 cib.customcommand.succes.sleeptimeadd=§aDefina a velocidade de salto à noite para §7%s§6.
 cib.customcommand.missingparam.sleepsetplayers=§cPor favor, especifique um número mínimo de jogadores para passar a noite.
 cib.customcommand.missingparam.sleeptimeadd=§cPor favor, especifique um número de tiques para adicionar enquanto pula a noite.
-cib.customcommand.notanumber.sleeptimeadd=§cO parâmetro recebido (§7%s)§c não é um número. Especifique um número inteiro.
-chat.type.sleeping=§b%s Ele está dormindo em uma cama... Bons sonhos!
+cib.customcommand.notanumber=§cO parâmetro recebido (§7%s§c) não é um número. Especifique um número inteiro.
+cib.customcommand.cannotbezero=§cO parâmetro recebido não pode ser 0. Especifique um valor maior que 0.
+chat.type.sleeping=§b%s está dormindo em uma cama... Bons sonhos!

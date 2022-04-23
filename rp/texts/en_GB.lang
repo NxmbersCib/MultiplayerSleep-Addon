@@ -1,8 +1,8 @@
-cib.sleep.request=§e%s is asking to jump to dawn!
-cib.sleep.passed=§aThe night was skipped to dawn, good morning.
+cib.sleep.passed=§bThe night has skipped until dawn, good morning.
 cib.customcommand.succes.sleepsetplayers=§aSet the minimum number of players to spend the night at §7%s§a.
 cib.customcommand.succes.sleeptimeadd=§aSet jump speed at night to §7%s§6.
 cib.customcommand.missingparam.sleepsetplayers=§cPlease specify a minimum number of players to spend the night.
 cib.customcommand.missingparam.sleeptimeadd=§cPlease specify a number of ticks to add while skipping the night.
-cib.customcommand.notanumber.sleeptimeadd=§cThe received parameter (§7%s)§c is not a number. Please specify an integer.
-chat.type.sleeping=§b%s He's sleeping in a bed... Sweet dreams!
+cib.customcommand.notanumber=§cThe received parameter (§7%s§c) is not a number. Please specify an integer.
+cib.customcommand.cannotbezero=§cThe received parameter cannot be 0. Please specify a value greater than 0.
+chat.type.sleeping=§b%s is sleeping in a bed... Sweet dreams!
