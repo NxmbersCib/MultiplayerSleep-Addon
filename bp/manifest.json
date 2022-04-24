@@ -17,14 +17,15 @@
     ],
     "subpacks": [
         {
-            "folder_name": "noplayer.json",
-            "memory_tier": 0,
-            "name": "(Experimental) Don't uses player.json file."
-        },
-        {
             "folder_name": "player.json",
             "memory_tier": 0,
             "name": "(Stable) Uses player.json file."
+        },
+        
+        {
+            "folder_name": "noplayer.json",
+            "memory_tier": 0,
+            "name": "(Experimental) Don't uses player.json file."
         }
     ]
 }

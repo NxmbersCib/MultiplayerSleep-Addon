@@ -1,10 +1,11 @@
 cib.sleep.passed=§bNatten er over, god morgen.
-cib.customcommand.succes.help=§eTilgjengelige kommandoer: §a%2§r: §7Hjelp med egendefinerte kommandoer. %1§b(bare OP) §a%3§r:§7 Addon Settings Manager.%1Skriv inn %2 <Kommando> for å få hjelp til en bestemt kommando.
-cib.customcommand.succes.help.sleep=§c(Kun OP)§e Dvalekommando: %1§7Addon-konfigurasjonsbehandling. %1§eParametere: %1 §aminspillere§r:§7 Minimum antall spillere for å overnatte. %1 §etimeadd§r: §7Hastighet som natt hoppes over.
-cib.customcommand.succes.help.help=§eHjelp kommando: %1§7Få hjelp med egendefinerte kommandoer.
-cib.customcommand.succes.sleepsetplayers=§aAngi minimum antall spillere som skal overnatte på §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§aSett hopphastigheten om natten til §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§aMinste antall spillere for å overnatte er §7%s§a.
+cib.sleep.sleepingplayersstatus=spillere som sover.
+cib.customcommand.success.help=§eTilgjengelige kommandoer: %1§a%2§r: §7Hjelp med egendefinerte kommandoer. %1§b(bare OP)%1§a%3§r:§7 Addon Settings Manager.%1Skriv inn %2 <Kommando> for å få hjelp til en bestemt kommando.
+cib.customcommand.success.help.sleep=§c(Kun OP)§e Dvalekommando: %1§7Addon-konfigurasjonsbehandling. %1§eParametere: %1 §aminspillere§r:§7 Minimum antall spillere for å overnatte. %1 §atimeadd§r: §7Hastighet som natt hoppes over.
+cib.customcommand.success.help.help=§eHjelp kommando: %1§7Få hjelp med egendefinerte kommandoer.
+cib.customcommand.success.sleepminplayers=§aAngi minimum antall spillere som skal overnatte på §7%s§a.
+cib.customcommand.success.sleeptimeadd=§aSett hopphastigheten om natten til §7%s§6.
+cib.customcommand.missingparam.sleepminplayers=§aMinste antall spillere for å overnatte er §7%s§a.
 cib.customcommand.missingparam.sleeptimeadd=§aMengden av kryss som skal legges til mens du hopper over natten er §7%s§a.
 cib.customcommand.notanumber=§cDen mottatte parameteren (§7%s§c) er ikke et tall. Vennligst spesifiser et heltall.
 cib.customcommand.cannotbezero=§cDen mottatte parameteren kan ikke være 0. Vennligst spesifiser en verdi større enn 0.

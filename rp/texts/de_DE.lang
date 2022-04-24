@@ -1,10 +1,11 @@
 cib.sleep.passed=§bDie Nacht ist vorbei, guten Morgen.
-cib.customcommand.succes.help=§eVerfügbare Befehle: §a%2§r: §7Hilfe mit benutzerdefinierten Befehlen. %1§b(nur OP) §a%3§r:§7 Addon-Einstellungsmanager.%1Geben Sie %2 <Befehl> ein, um Hilfe zu einem bestimmten Befehl zu erhalten.
-cib.customcommand.succes.help.sleep=§c(Nur OP)§e Sleep-Befehl: %1§7Addon-Konfigurationsmanager. %1§eParameter: %1 §aminplayers§r:§7 Mindestanzahl an Spielern zum Übernachten. %1 §etimeadd§r: §7Geschwindigkeit, bei der die Nacht übersprungen wird.
-cib.customcommand.succes.help.help=§eHelp-Befehl: %1§7Hier erhalten Sie Hilfe zu benutzerdefinierten Befehlen.
-cib.customcommand.succes.sleepsetplayers=§aLegen Sie die Mindestanzahl an Spielern für die Übernachtung auf §7%s§a fest.
-cib.customcommand.succes.sleeptimeadd=§aSprunggeschwindigkeit bei Nacht auf §7%s§6 setzen.
-cib.customcommand.missingparam.sleepsetplayers=§aDie Mindestanzahl an Spielern zum Übernachten beträgt §7%s§a.
+cib.sleep.sleepingplayersstatus=Spieler schlafen.
+cib.customcommand.success.help=§eVerfügbare Befehle: %1§a%2§r: §7Hilfe mit benutzerdefinierten Befehlen. %1§b(nur OP)%1§a%3§r:§7 Addon-Einstellungsmanager.%1Geben Sie %2 <Befehl> ein, um Hilfe zu einem bestimmten Befehl zu erhalten.
+cib.customcommand.success.help.sleep=§c(Nur OP)§e Sleep-Befehl: %1§7Addon-Konfigurationsmanager. %1§eParameter: %1 §aminplayers§r:§7 Mindestanzahl an Spielern zum Übernachten. %1 §atimeadd§r: §7Geschwindigkeit, bei der die Nacht übersprungen wird.
+cib.customcommand.success.help.help=§eHelp-Befehl: %1§7Hier erhalten Sie Hilfe zu benutzerdefinierten Befehlen.
+cib.customcommand.success.sleepminplayers=§aLegen Sie die Mindestanzahl an Spielern für die Übernachtung auf §7%s§a fest.
+cib.customcommand.success.sleeptimeadd=§aSprunggeschwindigkeit bei Nacht auf §7%s§6 setzen.
+cib.customcommand.missingparam.sleepminplayers=§aDie Mindestanzahl an Spielern zum Übernachten beträgt §7%s§a.
 cib.customcommand.missingparam.sleeptimeadd=§aDie Anzahl der hinzuzufügenden Ticks beim Überspringen der Nacht beträgt §7%s§a.
 cib.customcommand.notanumber=§cDer empfangene Parameter (§7%s§c) ist keine Zahl. Bitte geben Sie eine Ganzzahl an.
 cib.customcommand.cannotbezero=§cDer empfangene Parameter darf nicht 0 sein. Bitte geben Sie einen Wert größer als 0 an.

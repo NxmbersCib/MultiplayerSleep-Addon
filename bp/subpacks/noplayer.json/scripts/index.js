@@ -4,19 +4,17 @@ You can create forks on the github page of the addon: https://github.com/CibNume
 For more information to authorize your copies, you can contact him on discord: CibNumeritos#4239
 or contact him via Twitter: https://twitter.com/CibNumeritos - Don't share direct download links.
 */
-import { world, BeforeChatEvent } from 'mojang-minecraft';
+import { world, BeforeChatEvent, BlockLocation } from 'mojang-minecraft';
+let toggle = false;
 let minPlayers;
-let sleepingPlayers;
-let timeAdd;
+var sleepingPlayers;
+var timeAdd;
 let prefix = "!";
 try {
     world.getDimension('overworld').runCommand(`scoreboard objectives add uopsdb dummy`);
     minPlayers = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage.match(/-?\d+/)[0]);
     timeAdd = parseInt(world.getDimension('overworld').runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`).statusMessage.match(/-?\d+/)[0]);
-} catch (error) {
-    world.getDimension('overworld').runCommand(`scoreboard players set uopsMinPlayers uopsdb 1`);
-    world.getDimension('overworld').runCommand(`scoreboard players set uopsTimeAdd uopsdb 50`);
-};
+} catch (error) {};
 let runCommand = (cmd, dim = 'overworld') => {
     try {
         return { error: false, ...world.getDimension(dim).runCommand(cmd) };
@@ -45,7 +43,7 @@ let sleepingPlayersUpdate = () => {
         };
     };
     try {
-        sleepingPlayers = world.getDimension('overworld').runCommand(`testfor @a[tag="{IsSleeping}"]`)?.victim.length;
+        sleepingPlayers = world.getDimension('overworld').runCommand(`testfor @a[tag="{IsSleeping}"]`).victim?.length;
     } catch (error) {
         sleepingPlayers = 0;
     };
@@ -53,18 +51,24 @@ let sleepingPlayersUpdate = () => {
 world.events.beforeChat.subscribe(data => {
     if (data.message.startsWith(prefix)) { 
         commands(data);
+        data.cancel = true;
     };
 });
 world.events.tick.subscribe((currentTick) => {
     sleepingPlayersUpdate();
     minPlayers = parseInt(runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
     timeAdd = parseInt(runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
+    if (sleepingPlayers > 0) {
+        runCommand(`titleraw @a actionbar {"rawtext":[{"text":"§7${sleepingPlayers}/${minPlayers} "},{"translate":"cib.sleep.sleepingplayersstatus"}]}`);
+    }; 
     if (isNight() && sleepingPlayers >= minPlayers) {
-        world.getDimension('overworld').runCommand(`time add ${timeAdd}`);
-        if (getTime() == 23500) {
-            return runCommand(`tellraw @a {"rawtext":[{"translate":"cib.sleep.passed"}]}`);
-        };
+        runCommand(`time add ${timeAdd}`)
     };
+    if (getTime() > 23460 && !toggle || getTime() < 12542 && getTime() > 0 && !toggle) {
+        runCommand(`tellraw @a {"rawtext":[{"translate":"cib.sleep.passed"}]}`);
+        toggle = true;
+    };
+    isNight() ? toggle = false : toggle;
 });
 let getTime = () => {
     try {
@@ -77,17 +81,21 @@ let getTime = () => {
 let isNight = () => {
     try {
         let timeQuery = parseInt(world.getDimension('overworld').runCommand(`time query daytime`).statusMessage?.match(/-?\d+/)[0]);
-        if (timeQuery >= 12542) {
+        if (timeQuery >= 12542 && timeQuery < 23460) {
             return true;
         };
     } catch (error) {
         return { error: false, ...error };
     };
 };
+/**
+ * @param {BeforeChatEvent} data
+ */
 function commands(data) {
     let command = data.message.match(new RegExp('(' + `\\${prefix}` + ')\\w+'))?.[0].toLowerCase();
     let origin = data.sender;
-    let params = data.message.split(' '); params.splice(0, 1);
+    let params = data.message.split(' '); 
+    params.splice(0, 1);
     let quotes = data.message.match(/(?<=\").*?(?=\")/g);
     let selector = Array.from(world.getPlayers()).find(sel => {
         sel.nameTag 
@@ -100,17 +108,17 @@ function commands(data) {
     switch (true) {
         case command == `${prefix}help` || command == `${prefix}h`: {
             switch (true) {
-                case params?.[0] == sleep: {
+                case params?.[0] == 'sleep': {
                     let s1 = `\n`;
-                    runCommand(`tellraw "${origin.nameTag}}" {"rawtext":[{"translate":"cib.commands.succes.help.sleep","wih":["${s1}"]}]}`);
+                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.success.help.sleep","with":["${s1}"]}]}`);
                 } break;
-                case params?.[0] == help: {
+                case params?.[0] == 'help': {
                     let s1 = `\n`;
-                    runCommand(`tellraw "${origin.nameTag}}" {"rawtext":[{"translate":"cib.commands.succes.help.help","wih":["${s1}"]}]}`);
+                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.success.help.help","with":["${s1}"]}]}`);
                 } break;
                 default: {
-                    let s1 = `\n`, s2 = `${prefix}help / ${prefix}h\n`, s3 = `${prefix}sleep / ${prefix}s`;
-                    runCommand(`tellraw "${origin.nameTag}}" {"":[{"translate":"cib.commands.succes.help","wih":["${s1}", "${s2}", "${s3}"]}]}`);
+                    let s1 = `\n`, s2 = `${prefix}help / ${prefix}h`, s3 = `${prefix}sleep / ${prefix}s`;
+                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.success.help","with":["${s1}", "${s2}", "${s3}"]}]}`);
                 } break;
             };
         } break;
@@ -118,10 +126,9 @@ function commands(data) {
             runCommand(`tellraw "${origin.nameTag}"" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.unknown", "with": ["${command.substring(prefix.length)}"]}]}`);
         } break;
         case origin.hasTag('op') && command == `${prefix}sleep` || origin.hasTag('op') && command == `${prefix}s`: {
-            data.cancel = true;
             switch (true) {
                 case !origin.hasTag('op') && params[0] == "setplayers": {
-                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.syntax","with":["${command.substring(prefix.length)}","${params[0]}"]}]}`);
+                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.syntax","with":["${command.substring(prefix.length)} ","${params[0]}"]}]}`);
                 } break;
                 case params[0] == "minplayers" || params[0] == "mp": {
                     let check = parseInt(params?.[1], 10);
@@ -137,7 +144,7 @@ function commands(data) {
                         } break;
                         default: {
                             runCommand(`scoreboard players set uopsMinPlayers uopsdb ${check}`);
-                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.succes.sleepminplayers","with":["${params[1]}"]}]}`);
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.success.sleepminplayers","with":["${params[1]}"]}]}`);
                         } break;
                     };
                 } break;
@@ -155,12 +162,12 @@ function commands(data) {
                         } break;
                         default: {
                             runCommand(`scoreboard players set uopsTimeAdd uopsdb ${check}`);
-                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.succes.sleeptimeadd","with":["${check}"]}]}`);
+                            runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.success.sleeptimeadd","with":["${check}"]}]}`);
                         } break;
                     };
                 } break;
                 default: {
-                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.syntax","with":["${command.substring(prefix.length)}","${params[0]}"]}]}`);
+                    runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"text":"§c"},{"translate":"commands.generic.syntax","with":["${command.substring(prefix.length)} ","${params?.[0]}"]}]}`);
                 } break;
             };
         } break;

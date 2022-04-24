@@ -1,10 +1,11 @@
 cib.sleep.passed=§bThe night is over, good morning.
-cib.customcommand.succes.help=§eAvailable commands: §a%2§r: §7Help with custom commands. %1§b(OP Only) §a%3§r:§7 Addon Settings Manager.%1Type %2 <Command> to get help on a specific command.
-cib.customcommand.succes.help.sleep=§c(Only OP)§e Sleep command: %1§7Addon configuration manager. %1§eParameters: %1 §aminplayers§r:§7 Minimum number of players to spend the night. %1 §etimeadd§r: §7Speed ​​at which night is skipped.
-cib.customcommand.succes.help.help=§eHelp command: %1§7Get help with custom commands.
-cib.customcommand.succes.sleepsetplayers=§aSet the minimum number of players to spend the night at §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§aSet jump speed at night to §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§aThe minimum number of players to spend the night is §7%s§a.
+cib.sleep.sleepingplayersstatus=players sleeping.
+cib.customcommand.success.help=§eAvailable commands: %1§a%2§r: §7Help with custom commands. %1§b(OP Only)%1§a%3§r:§7 Addon Settings Manager.%1Type %2 <Command> to get help on a specific command.
+cib.customcommand.success.help.sleep=§c(Only OP)§e Sleep command: %1§7Addon configuration manager. %1§eParameters: %1 §aminplayers§r:§7 Minimum number of players to spend the night. %1 §atimeadd§r: §7Speed at which night is skipped.
+cib.customcommand.success.help.help=§eHelp command: %1§7Get help with custom commands.
+cib.customcommand.success.sleepminplayers=§aSet the minimum number of players to spend the night at §7%s§a.
+cib.customcommand.success.sleeptimeadd=§aSet jump speed at night to §7%s§6.
+cib.customcommand.missingparam.sleepminplayers=§aThe minimum number of players to spend the night is §7%s§a.
 cib.customcommand.missingparam.sleeptimeadd=§aThe amount of ticks to add while skipping the night is §7%s§a.
 cib.customcommand.notanumber=§cThe received parameter (§7%s§c) is not a number. Please specify an integer.
 cib.customcommand.cannotbezero=§cThe received parameter cannot be 0. Please specify a value greater than 0.

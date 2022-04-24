@@ -1,10 +1,11 @@
 cib.sleep.passed=§bΗ νύχτα τελείωσε, καλημέρα.
-cib.customcommand.succes.help=§eΔιαθέσιμες εντολές: §a%2§r: §7Βοήθεια με προσαρμοσμένες εντολές. %1§b(OP Only) §a%3§r:§7 Addon Settings Manager.%1Πληκτρολογήστε %2 <Command> για να λάβετε βοήθεια σχετικά με μια συγκεκριμένη εντολή.
-cib.customcommand.succes.help.sleep=§c(Only OP)§e Εντολή Sleep: %1§7Addon configuration manager. %1§eΠαράμετροι: %1 §aminplayers§r:§7 Ελάχιστος αριθμός παικτών για διανυκτέρευση. %1 §etimeadd§r: §7Ταχύτητα με την οποία παραλείπεται η νύχτα.
-cib.customcommand.succes.help.help=Εντολή §eHelp: %1§7Λάβετε βοήθεια με προσαρμοσμένες εντολές.
-cib.customcommand.succes.sleepsetplayers=§a Ορίστε τον ελάχιστο αριθμό παικτών που θα διανυκτερεύσουν στο §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§a Ρυθμίστε την ταχύτητα άλματος τη νύχτα σε §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§aΟ ελάχιστος αριθμός παικτών για διανυκτέρευση είναι §7%s§a.
+cib.sleep.sleepingplayersstatus=οι παίκτες κοιμούνται.
+cib.customcommand.success.help=§eΔιαθέσιμες εντολές: %1§a%2§r: §7Βοήθεια με προσαρμοσμένες εντολές. %1§b(OP Only)%1§a%3§r:§7 Διαχειριστής ρυθμίσεων πρόσθετου.%1Πληκτρολογήστε %2 <Command> για να λάβετε βοήθεια σχετικά με μια συγκεκριμένη εντολή.
+cib.customcommand.success.help.sleep=§c(Only OP)§e Εντολή Sleep: %1§7Addon configuration manager. %1§eΠαράμετροι: %1 §aminplayers§r:§7 Ελάχιστος αριθμός παικτών για διανυκτέρευση. %1 §atimeadd§r: §7Ταχύτητα με την οποία παραλείπεται η νύχτα.
+cib.customcommand.success.help.help=Εντολή §eHelp: %1§7Λάβετε βοήθεια με προσαρμοσμένες εντολές.
+cib.customcommand.success.sleepminplayers=§a Ορίστε τον ελάχιστο αριθμό παικτών που θα διανυκτερεύσουν στο §7%s§a.
+cib.customcommand.success.sleeptimeadd=§a Ρυθμίστε την ταχύτητα άλματος τη νύχτα σε §7%s§6.
+cib.customcommand.missingparam.sleepminplayers=§aΟ ελάχιστος αριθμός παικτών για διανυκτέρευση είναι §7%s§a.
 cib.customcommand.missingparam.sleeptimeadd=§aΗ ποσότητα των κροτώνων που πρέπει να προσθέσετε ενώ παραλείπετε τη νύχτα είναι §7%s§a.
 cib.customcommand.notanumber=§cΗ ληφθείσα παράμετρος (§7%s§c) δεν είναι αριθμός. Προσδιορίστε έναν ακέραιο αριθμό.
 cib.customcommand.cannotbezero=§cΗ λαμβανόμενη παράμετρος δεν μπορεί να είναι 0. Καθορίστε μια τιμή μεγαλύτερη από 0.

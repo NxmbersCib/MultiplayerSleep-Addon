@@ -1,10 +1,11 @@
 cib.sleep.passed=§bНіч закінчилася, доброго ранку.
-cib.customcommand.succes.help=§eДоступні команди: §a%2§r: §7Довідка з користувацькими командами. %1§b(Тільки OP) §a%3§r:§7 Менеджер налаштувань додатків.%1Введіть %2 <Команда>, щоб отримати допомогу щодо певної команди.
-cib.customcommand.succes.help.sleep=§c(Тільки OP)§e Команда сну: %1§7Менеджер конфігурації додатків. %1§eПараметри: %1 §aminplayers§r:§7 Мінімальна кількість гравців, які можуть переночувати. %1 §etimeadd§r: §7Швидкість, з якою пропускається ніч.
-cib.customcommand.succes.help.help=§Команда eHelp: %1§7Отримайте довідку щодо користувацьких команд.
-cib.customcommand.succes.sleepsetplayers=§aВстановіть мінімальну кількість гравців, які переночують у §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§aВстановіть швидкість стрибка вночі на §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§aМінімальна кількість гравців для ночівлі становить §7%s§a.
+cib.sleep.sleepingplayersstatus=гравці сплять.
+cib.customcommand.success.help=§eДоступні команди: %1§a%2§r: §7Довідка з користувацькими командами. %1§b(Лише OP)%1§a%3§r:§7 Менеджер налаштувань додатків.%1Введіть %2 <Команда>, щоб отримати довідку щодо певної команди.
+cib.customcommand.success.help.sleep=§c(Тільки OP)§e Команда сну: %1§7Менеджер конфігурації додатків. %1§eПараметри: %1 §aminplayers§r:§7 Мінімальна кількість гравців, які можуть переночувати. %1 §atimeadd§r: §7Швидкість, на якій ніч пропускається.
+cib.customcommand.success.help.help=§Команда eHelp: %1§7Отримайте довідку щодо користувацьких команд.
+cib.customcommand.success.sleepminplayers=§aВстановіть мінімальну кількість гравців, які переночують у §7%s§a.
+cib.customcommand.success.sleeptimeadd=§aВстановіть швидкість стрибка вночі на §7%s§6.
+cib.customcommand.missingparam.sleepminplayers=§aМінімальна кількість гравців для ночівлі становить §7%s§a.
 cib.customcommand.missingparam.sleeptimeadd=§aКількість тиків, які потрібно додати під час пропуску ночі, становить §7%s§a.
 cib.customcommand.notanumber=§cОтриманий параметр (§7%s§c) не є числом. Будь ласка, вкажіть ціле число.
 cib.customcommand.cannotbezero=§cОтриманий параметр не може бути 0. Будь ласка, вкажіть значення більше 0.

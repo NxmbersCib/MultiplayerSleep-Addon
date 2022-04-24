@@ -1,10 +1,11 @@
 cib.sleep.passed=§bNoc się skończyła, dzień dobry.
-cib.customcommand.succes.help=§eDostępne polecenia: §a%2§r: §7Pomoc z niestandardowymi poleceniami. %1§b(Tylko OP) §a%3§r:§7 Menedżer ustawień dodatków.%1Wpisz %2 <Polecenie>, aby uzyskać pomoc dotyczącą określonego polecenia.
-cib.customcommand.succes.help.sleep=§c(Tylko OP)§e Polecenie uśpienia: %1§7Dodaj menedżer konfiguracji. %1§eParametry: %1 §amiplayers§r:§7 Minimalna liczba graczy do spędzenia nocy. %1 §etimeadd§r: §7Prędkość, przy której noc jest pomijana.
-cib.customcommand.succes.help.help=§Polecenie eHelp: %1§7Uzyskaj pomoc dotyczącą poleceń niestandardowych.
-cib.customcommand.succes.sleepsetplayers=§aUstaw minimalną liczbę graczy, którzy spędzą noc na §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§aUstaw prędkość skoku w nocy na §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§aMinimalna liczba graczy do spędzenia nocy to §7%s§a.
+cib.sleep.sleepingplayersstatus=gracze śpią.
+cib.customcommand.success.help=§eDostępne polecenia: %1§a%2§r: §7Pomoc z poleceniami niestandardowymi. %1§b(Tylko OP)%1§a%3§r:§7 Menedżer ustawień dodatków.%1Wpisz %2 <Polecenie>, aby uzyskać pomoc dotyczącą określonego polecenia.
+cib.customcommand.success.help.sleep=§c(Tylko OP)§e Polecenie uśpienia: %1§7Dodaj menedżer konfiguracji. %1§eParametry: %1 §amiplayers§r:§7 Minimalna liczba graczy do spędzenia nocy. %1 §atimeadd§r: §7Prędkość, przy której noc jest pomijana.
+cib.customcommand.success.help.help=§Polecenie eHelp: %1§7Uzyskaj pomoc dotyczącą poleceń niestandardowych.
+cib.customcommand.success.sleepminplayers=§aUstaw minimalną liczbę graczy, którzy spędzą noc na §7%s§a.
+cib.customcommand.success.sleeptimeadd=§aUstaw prędkość skoku w nocy na §7%s§6.
+cib.customcommand.missingparam.sleepminplayers=§aMinimalna liczba graczy do spędzenia nocy to §7%s§a.
 cib.customcommand.missingparam.sleeptimeadd=§aIlość kleszczy do dodania podczas pomijania nocy wynosi §7%s§a.
 cib.customcommand.notanumber=§cOdebrany parametr (§7%s§c) nie jest liczbą. Podaj liczbę całkowitą.
 cib.customcommand.cannotbezero=§cOdebrany parametr nie może być równy 0. Proszę podać wartość większą niż 0.

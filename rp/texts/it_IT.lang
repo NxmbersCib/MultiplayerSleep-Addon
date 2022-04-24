@@ -1,10 +1,11 @@
 cib.sleep.passed=§bLa notte è finita, buongiorno.
-cib.customcommand.succes.help=§eComandi disponibili: §a%2§r: §7Aiuto con i comandi personalizzati. %1§b(solo OP) §a%3§r:§7 Gestione impostazioni componenti aggiuntivi.%1Digitare %2 <Comando> per ottenere aiuto su un comando specifico.
-cib.customcommand.succes.help.sleep=§c(Solo OP)§e Comando Sleep: %1§7Gestione configurazione addon. %1§eParameters: %1 §aminplayers§r:§7 Numero minimo di giocatori per passare la notte. %1 §etimeadd§r: §7Velocità con cui si salta la notte.
-cib.customcommand.succes.help.help=§eComando di aiuto: %1§7Ottieni aiuto con i comandi personalizzati.
-cib.customcommand.succes.sleepsetplayers=§aImposta il numero minimo di giocatori per passare la notte al §7%s§a.
-cib.customcommand.succes.sleeptimeadd=§aImpostare la velocità di salto di notte a §7%s§6.
-cib.customcommand.missingparam.sleepsetplayers=§aIl numero minimo di giocatori per passare la notte è §7%s§a.
+cib.sleep.sleepingplayersstatus=giocatori che dormono.
+cib.customcommand.success.help=§eComandi disponibili: %1§a%2§r: §7Aiuto con i comandi personalizzati. %1§b(solo OP)%1§a%3§r:§7 Gestione impostazioni componenti aggiuntivi.%1Digitare %2 <Comando> per ottenere assistenza su un comando specifico.
+cib.customcommand.success.help.sleep=§c(Solo OP)§e Comando Sleep: %1§7Gestione configurazione addon. %1§eParameters: %1 §aminplayers§r:§7 Numero minimo di giocatori per passare la notte. %1 §atimeadd§r: §7Velocità con cui si salta la notte.
+cib.customcommand.success.help.help=§eComando di aiuto: %1§7Ottieni aiuto con i comandi personalizzati.
+cib.customcommand.success.sleepminplayers=§aImposta il numero minimo di giocatori per passare la notte al §7%s§a.
+cib.customcommand.success.sleeptimeadd=§aImpostare la velocità di salto di notte a §7%s§6.
+cib.customcommand.missingparam.sleepminplayers=§aIl numero minimo di giocatori per passare la notte è §7%s§a.
 cib.customcommand.missingparam.sleeptimeadd=§aLa quantità di tick da aggiungere saltando la notte è §7%s§a.
 cib.customcommand.notanumber=§cIl parametro ricevuto (§7%s§c) non è un numero. Si prega di specificare un numero intero.
 cib.customcommand.cannotbezero=§cIl parametro ricevuto non può essere 0. Specificare un valore maggiore di 0.
