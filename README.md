@@ -7,6 +7,7 @@ Thank you very much for downloading Ultimate One Player sleep.
 You can create forks or bug reports on the github page:
 https://github.com/CibNumeritos/Ultimate-OnePlayerSleep
 Any bug reports or translation improvement forks will be greatly appreciated and possibly rewarded.
+
 [ESP]
 - Este addon fue creado por
 CibNumeritos#4239 y pertenece a CibNumeritos#4239, cualquier copia no autorizada, publicacion de links directos, intentos de hacerse pasar por CibNumeritos#4239 e intento de apropiarse de el producto sera penalizada.
