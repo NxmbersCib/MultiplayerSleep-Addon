@@ -4,8 +4,7 @@
 For more information about authorizing copies or direct links, contact the creator via discord (CibNumeritos#4239), via twitter (https://www.twitter.com/cibnumeritos) or via email (imcib2498.212244.2808@gmail.com).
 Thank you very much for downloading Ultimate One Player sleep.
 You can create forks or bug reports on the github page:
-https://github.com/CibNumeritos/Ultimate-OnePlayerSleep\n
-xd
+https://github.com/CibNumeritos/Ultimate-OnePlayerSleep
 Any bug reports or translation improvement forks will be greatly appreciated and possibly rewarded.
 
 [ESP]
