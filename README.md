@@ -29,4 +29,7 @@ Cualquier reporte de errores o forks de mejoras de traducción se agradeceran in
 
 [EXPERIMENTAL FEATURES / CARACTERISTICAS EXPERIMENTALES]
 - This addon only needs **GameTest Framework** to work correctly in both versions. / Este addon solo necesita **GameTest Framework** para funcionar correctamente en ambas versiones. 
-<img>
+
+<p align="center"> 710 375
+  <img src="./experimentalfeatures.png" width="350">
+</p>
