@@ -38,7 +38,7 @@ world.events.tick.subscribe((currentTick) => {
     minPlayers = parseInt(runCommand(`scoreboard players test uopsMinPlayers uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
     sleepingPlayers = parseInt(runCommand(`scoreboard players test uopsSleepingPlrs uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
     timeAdd = parseInt(runCommand(`scoreboard players test uopsTimeAdd uopsdb * *`).statusMessage?.match(/-?\d+/)[0]);
-    if (sleepingPlayers > 1) {
+    if (sleepingPlayers > 0 && minPlayers > 1) {
         runCommand(`titleraw @a actionbar {"rawtext":[{"text":"§7${sleepingPlayers}/${minPlayers} "},{"translate":"cib.sleep.sleepingplayersstatus"}]}`);
     } else if (sleepingPlayers == 1 && minPlayers == 1) {
         runCommand(`execute @a[tag="{IsSleeping}"] ~ ~ ~ titleraw @a actionbar {"rawtext":[{"text":"§7"},{"selector":"@s"},{"translate":"cib.sleep.sleepingoneplayerstatus"}]}`);
