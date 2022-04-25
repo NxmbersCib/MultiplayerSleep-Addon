@@ -16,3 +16,15 @@ Muchas gracias por descargar Ultimate One Player sleep.
 Usted puede crear forks y reportar errores en la pagina de github:
 https://github.com/CibNumeritos/Ultimate-OnePlayerSleep
 Cualquier reporte de errores o forks de mejoras de traducción se agradeceran infinitamente y posiblemente sera recompensado.
+
+[ENG - USER GUIDE]
+- The default prefix is "!"
+- The addon can be configured by using the !sleep command. For more in-game information you can use !help command, the sleep command has two parameters:
+  - minplayers: represents the minimum of players required to start the night-to-dawn jump, this parameter needs to be an integer and not a float number; **WARNING:**  If you misuse the parameter and put values like "8-548\*2654" *it's not my problem.* The addon will only take the first integer that can be found in the given parameter, if the given parameter is not an integer and only string characters, an error will be returned.
+  - timeadd: represents the per-tick velocity in wich the night will be procedurally skipped, this parameter needs to be an integer and not a float number; **WARNING:**  If you misuse the parameter and put values like "8-548\*2654" *it's not my problem.* The addon will only take the first integer that can be found in the given parameter, if the given parameter is not an integer and only string characters, an error will be returned.
+
+[ESP - USER GUIDE]
+- El prefijo default es "!"
+- El addon puede ser configurado usando el comando !sleep. Para mas informacion dentro del juego puede usar el comando !help, el comando sleep tiene dos parametros:
+  - minplayers: representa el minimo de jugadores requeridos para iniciar el salto de noche-amanecer, este parametro debe set un entero y no un numero flotante (decimal); **ADVERTENCIA:** Si utiliza mal el parametro y pone valores como "8-458\*2654" *no es mi problema.* El addon solo tomara el primer entero que pueda encontrar en el parametro dado, si el parametro dado no es un entero y solo caracteres de cadena string, un error será devuelto.
+  - timeadd: representa la velocidad por-tick en la que la noche sera proceduralmente salteada, este parametro debe ser un entero y no un numero flotante (decimal); **ADVERTENCIA:** Si utiliza mal el parametro y pone valores como "8-458\*2654" *no es mi problema.* El addon solo tomara el primer entero que pueda encontrar en el parametro dado, si el parametro dado no es un entero y solo caracteres de cadena string, un error será devuelto.
