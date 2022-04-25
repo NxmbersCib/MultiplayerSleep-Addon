@@ -1,12 +1,13 @@
 cib.sleep.passed=§b밤이 끝났습니다, 좋은 아침입니다.
-cib.sleep.sleepingplayersstatus=잠자는 선수들.
+cib.sleep.sleepingoneplayerstatus= 자고 있다.
+cib.sleep.sleepingplayersstatus=자고 있는 선수들.
 cib.customcommand.success.help=§e사용 가능한 명령: %1§a%2§r: §7사용자 지정 명령에 대한 도움말입니다. %1§b(OP 전용)%1§a%3§r:§7 애드온 설정 관리자.%1특정 명령에 대한 도움말을 보려면 %2 <명령>을 입력하십시오.
 cib.customcommand.success.help.sleep=§c(Only OP)§e 절전 명령: %1§7애드온 구성 관리자. %1§e매개변수: %1 §aminplayers§r:§7 하룻밤을 보낼 수 있는 최소 플레이어 수입니다. %1 §atimeadd§r: §7밤을 건너뛰는 속도.
 cib.customcommand.success.help.help=§eHelp 명령: %1§7사용자 지정 명령에 대한 도움말을 봅니다.
 cib.customcommand.success.sleepminplayers=§a§7%s§a에서 하룻밤을 보낼 최소 플레이어 수를 설정합니다.
-cib.customcommand.success.sleeptimeadd=§a야간 점프 속도를 §7%s§6으로 설정합니다.
+cib.customcommand.success.sleeptimeadd=§a야간 점프 속도를 §7%s§a로 설정합니다.
 cib.customcommand.missingparam.sleepminplayers=§a밤을 보낼 수 있는 최소 플레이어 수는 §7%s§a입니다.
-cib.customcommand.missingparam.sleeptimeadd=§a밤을 건너 뛰면서 추가하는 틱의 양은 §7%s§a입니다.
+cib.customcommand.missingparam.sleeptimeadd=§a밤을 건너뛸 때 추가할 틱 수는 §7%s§a입니다.
 cib.customcommand.notanumber=§c받은 매개변수(§7%s§c)는 숫자가 아닙니다. 정수를 지정하십시오.
-cib.customcommand.cannotbezero=§c수신된 매개변수는 0일 수 없습니다. 0보다 큰 값을 지정하십시오.
+cib.customcommand.cannotbezero_or_less=§c수신된 매개변수는 0 이하일 수 없습니다. 0보다 큰 값을 지정하십시오.
 chat.type.sleeping=§b%s님이 침대에서 자고 있습니다... 좋은 꿈 꾸세요!

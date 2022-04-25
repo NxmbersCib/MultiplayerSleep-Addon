@@ -1,12 +1,13 @@
 cib.sleep.passed=§b De nacht is voorbij, goedemorgen.
+cib.sleep.sleepingoneplayerstatus= slaapt.
 cib.sleep.sleepingplayersstatus=spelers slapen.
 cib.customcommand.success.help=§eBeschikbare commando's: %1§a%2§r: §7Help met aangepaste commando's. %1§b(Alleen OP)%1§a%3§r:§7 Add-on Settings Manager.%1Type %2 <Command> om hulp te krijgen bij een specifieke opdracht.
-cib.customcommand.success.help.sleep=§c(Alleen OP)§e Slaapcommando: %1§7Addon-configuratiemanager. %1§eParameters: %1 §aminplayers§r:§7 Minimum aantal spelers om de nacht door te brengen. %1 §atimeadd§r: §7Snelheid waarmee de nacht wordt overgeslagen.
+cib.customcommand.success.help.sleep=§c(Alleen OP)§e Slaapcommando: %1§7Addon-configuratiemanager. %1§eParametros: %1 §aminplayers§r:§7 Minimum aantal spelers om de nacht door te brengen. %1 §atimeadd§r: §7Snelheid waarmee de nacht wordt overgeslagen.
 cib.customcommand.success.help.help=§eHelp-opdracht: %1§7Hulp bij aangepaste opdrachten.
 cib.customcommand.success.sleepminplayers=§aStel het minimum aantal spelers in om de nacht door te brengen op §7%s§a.
-cib.customcommand.success.sleeptimeadd=§aStel de sprongsnelheid 's nachts in op §7%s§6.
+cib.customcommand.success.sleeptimeadd=§aStel de sprongsnelheid 's nachts in op §7% s§a.
 cib.customcommand.missingparam.sleepminplayers=§aHet minimum aantal spelers om te overnachten is §7%s§a.
 cib.customcommand.missingparam.sleeptimeadd=§aHet aantal vinkjes dat moet worden toegevoegd tijdens het overslaan van de nacht is §7%s§a.
 cib.customcommand.notanumber=§cDe ontvangen parameter (§7%s§c) is geen getal. Geef een geheel getal op.
-cib.customcommand.cannotbezero=§cDe ontvangen parameter kan niet 0 zijn. Geef een waarde op die groter is dan 0.
+cib.customcommand.cannotbezero_or_less=§cDe ontvangen parameter kan niet 0 of minder zijn. Geef een waarde op die groter is dan 0.
 chat.type.sleeping=§b%s slaapt in een bed... Zoete dromen!

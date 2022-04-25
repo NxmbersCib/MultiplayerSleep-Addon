@@ -1,12 +1,13 @@
 cib.sleep.passed=§bНочь закончилась, доброе утро.
+cib.sleep.sleepingoneplayerstatus= спит.
 cib.sleep.sleepingplayersstatus=игроки спят.
 cib.customcommand.success.help=§eДоступные команды: %1§a%2§r: §7Помощь с пользовательскими командами. %1§b(только OP)%1§a%3§r:§7 Диспетчер настроек дополнений.%1Введите %2 <Command>, чтобы получить справку по конкретной команде.
-cib.customcommand.success.help.sleep=§c(Только OP)§e Команда перехода в спящий режим: %1§7Диспетчер конфигурации надстроек. %1§eПараметры: %1 §aminplayers§r:§7 Минимальное количество игроков для ночевки. %1 §atimeadd§r: §7Скорость, с которой пропускается ночь.
+cib.customcommand.success.help.sleep=§c(Только OP)§e Команда перехода в спящий режим: %1§7Диспетчер конфигурации надстроек. %1§eПараметры: %1 §aminplayers§r:§7 Минимальное количество игроков для ночлега. %1 §atimeadd§r: §7Скорость, с которой пропускается ночь.
 cib.customcommand.success.help.help=Команда §eHelp: %1§7Получите справку по пользовательским командам.
 cib.customcommand.success.sleepminplayers=§aУстановите минимальное количество игроков, чтобы провести ночь в §7%s§a.
-cib.customcommand.success.sleeptimeadd=§aУстановите скорость прыжка ночью на §7%s§6.
+cib.customcommand.success.sleeptimeadd=§aУстановите скорость прыжка ночью на §7%s§a.
 cib.customcommand.missingparam.sleepminplayers=§aМинимальное количество игроков, которые могут провести ночь, составляет §7%s§a.
 cib.customcommand.missingparam.sleeptimeadd=§aКоличество тиков, которое можно добавить при пропуске ночи, составляет §7%s§a.
 cib.customcommand.notanumber=§cПолученный параметр (§7%s§c) не является числом. Укажите целое число.
-cib.customcommand.cannotbezero=§cПолученный параметр не может быть равен 0. Укажите значение больше 0.
+cib.customcommand.cannotbezero_or_less=§cПринятый параметр не может быть равен 0 или меньше. Укажите значение больше 0.
 chat.type.sleeping=§b%s спит в постели... Сладких снов!

@@ -1,12 +1,13 @@
 cib.sleep.passed=§b Yö on ohi, hyvää huomenta.
+cib.sleep.sleepingoneplayerstatus= on nukkumassa.
 cib.sleep.sleepingplayersstatus=pelaajat nukkumassa.
 cib.customcommand.success.help=§eSaatavilla olevat komennot: %1§a%2§r: §7Ohje mukautettujen komentojen kanssa. %1§b(Vain OP)%1§a%3§r:§7 Lisäysasetusten hallinta.%1Kirjoita %2 <Command> saadaksesi apua tietystä komennosta.
-cib.customcommand.success.help.sleep=§c(Vain OP)§e Lepotilakomento: %1§7Addon Configuration Manager. %1§eParameters: %1 §aminplayers§r:§7 Minimimäärä pelaajia yöpymään. %1 §atimeadd§r: §7Nopeus, jolla yö ohitetaan.
+cib.customcommand.success.help.sleep=§c(Vain OP)§e Lepotilakomento: %1§7Addon Configuration Manager. %1§eParametrit: %1 §aminplayers§r:§7 Pelaajien vähimmäismäärä yöpymään. %1 §atimeadd§r: §7Nopeus, jolla yö ohitetaan.
 cib.customcommand.success.help.help=§eHelp-komento: %1§7Apua mukautettujen komentojen kanssa.
 cib.customcommand.success.sleepminplayers=§aAseta yöpyvien pelaajien vähimmäismäärä kohdassa §7%s§a.
-cib.customcommand.success.sleeptimeadd=§aAseta hyppynopeudeksi yöllä §7%s§6.
+cib.customcommand.success.sleeptimeadd=§aAseta hyppynopeudeksi yöllä §7%s§a.
 cib.customcommand.missingparam.sleepminplayers=§aPelaajien vähimmäismäärä yöpymiseen on §7%s§a.
 cib.customcommand.missingparam.sleeptimeadd=§aYön väliin lisättävien punkkien määrä on §7%s§a.
 cib.customcommand.notanumber=§cVastaanotettu parametri (§7%s§c) ei ole numero. Määritä kokonaisluku.
-cib.customcommand.cannotbezero=§cVastaanotettu parametri ei voi olla 0. Määritä arvo, joka on suurempi kuin 0.
+cib.customcommand.cannotbezero_or_less=§cVastaanotettu parametri ei voi olla 0 tai pienempi. Määritä arvo, joka on suurempi kuin 0.
 chat.type.sleeping=§b%s nukkuu sängyssä... Kauniita unia!

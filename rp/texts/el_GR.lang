@@ -1,12 +1,13 @@
 cib.sleep.passed=§bΗ νύχτα τελείωσε, καλημέρα.
+cib.sleep.sleepingoneplayerstatus= κοιμάται.
 cib.sleep.sleepingplayersstatus=οι παίκτες κοιμούνται.
 cib.customcommand.success.help=§eΔιαθέσιμες εντολές: %1§a%2§r: §7Βοήθεια με προσαρμοσμένες εντολές. %1§b(OP Only)%1§a%3§r:§7 Διαχειριστής ρυθμίσεων πρόσθετου.%1Πληκτρολογήστε %2 <Command> για να λάβετε βοήθεια σχετικά με μια συγκεκριμένη εντολή.
-cib.customcommand.success.help.sleep=§c(Only OP)§e Εντολή Sleep: %1§7Addon configuration manager. %1§eΠαράμετροι: %1 §aminplayers§r:§7 Ελάχιστος αριθμός παικτών για διανυκτέρευση. %1 §atimeadd§r: §7Ταχύτητα με την οποία παραλείπεται η νύχτα.
+cib.customcommand.success.help.sleep=§c(Μόνο OP)§e Εντολή αναστολής λειτουργίας: %1§7Διαχείριση διαμόρφωσης προσθέτων. %1§eParametros: %1 §aminplayers§r:§7 Ελάχιστος αριθμός παικτών για διανυκτέρευση. %1 §atimeadd§r: §7Ταχύτητα με την οποία παραλείπεται η νύχτα.
 cib.customcommand.success.help.help=Εντολή §eHelp: %1§7Λάβετε βοήθεια με προσαρμοσμένες εντολές.
 cib.customcommand.success.sleepminplayers=§a Ορίστε τον ελάχιστο αριθμό παικτών που θα διανυκτερεύσουν στο §7%s§a.
-cib.customcommand.success.sleeptimeadd=§a Ρυθμίστε την ταχύτητα άλματος τη νύχτα σε §7%s§6.
+cib.customcommand.success.sleeptimeadd=§a Ρυθμίστε την ταχύτητα άλματος τη νύχτα στο §7%s§a.
 cib.customcommand.missingparam.sleepminplayers=§aΟ ελάχιστος αριθμός παικτών για διανυκτέρευση είναι §7%s§a.
-cib.customcommand.missingparam.sleeptimeadd=§aΗ ποσότητα των κροτώνων που πρέπει να προσθέσετε ενώ παραλείπετε τη νύχτα είναι §7%s§a.
+cib.customcommand.missingparam.sleeptimeadd=§aΗ ποσότητα των κροτώνων που πρέπει να προσθέσετε κατά την παράλειψη της νύχτας είναι §7%s§a.
 cib.customcommand.notanumber=§cΗ ληφθείσα παράμετρος (§7%s§c) δεν είναι αριθμός. Προσδιορίστε έναν ακέραιο αριθμό.
-cib.customcommand.cannotbezero=§cΗ λαμβανόμενη παράμετρος δεν μπορεί να είναι 0. Καθορίστε μια τιμή μεγαλύτερη από 0.
+cib.customcommand.cannotbezero_or_less=§cΗ λαμβανόμενη παράμετρος δεν μπορεί να είναι 0 ή μικρότερη. Προσδιορίστε μια τιμή μεγαλύτερη από 0.
 chat.type.sleeping=Ο §b%s κοιμάται σε κρεβάτι... Όνειρα γλυκά!
