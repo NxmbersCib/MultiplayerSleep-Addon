@@ -1,11 +1,10 @@
 {
     "format_version": 2,
     "header": {
-        "name": "§aUltimate One Player Sleep",
-        "description": "§o§bA powerfull one player sleep addon\n§r§aBy @CibNumeritos#4239.",
+        "name": "§aMultiplayer sleep",
+        "description": "§o§bA powerful one player sleep addon\n§r§aBy @CibNumeritos#4239.\nhttps://discord.gg/nehXXEQ8ub",
         "uuid": "a2b76452-e6c8-4982-92f5-755906c19458",
-        "version": [ 1, 0, 0 ],
-        "min_engine_version": [ 1, 18, 10 ]
+        "version": [ 1, 0, 0 ]
     },
     "modules": [
         { "type": "data", "description": "_", "uuid": "b2534a97-fe24-4dad-abcc-01bf889a31f0", "version": [ 1, 0, 0 ] },
