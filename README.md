@@ -1,4 +1,4 @@
-# Ultimate One Player Sleep AddOn
+# Multiplayer Sleep AddOn
 [ENG]
 - This addon was created by CibNumeritos#4239 and belongs to CibNumeritos#4239, any unauthorized copy, publication of direct links, attempts to impersonate CibNumeritos#4239 and attempt to appropriate the product will be penalized.
 For more information about authorizing copies or direct links, contact the creator via discord (CibNumeritos#4239), via twitter (https://www.twitter.com/cibnumeritos) or via email (imcib2498.212244.2808@gmail.com).
