@@ -1,8 +1,7 @@
 /* 
 This file belongs to: "@CibNumeritos", any unauthorized modification or change will be penalized, please don't upload any modded version of this pack.
-You can create forks on the github page of the addon: https://github.com/CibNumeritos/Ultimate-OnePlayerSleep.
-For more information to authorize your copies, you can contact him on discord: CibNumeritos#4239
-or contact him via Twitter: https://twitter.com/CibNumeritos - Don't share direct download links.
+You can create forks on the github page of the addon: https://github.com/CibNumeritos/MultiplayerSleep-Addon
+For more information to authorize your copies, you can contact him on discord: CibNumeritos#1094/https://discord.gg/nehXXEQ8ub don't share direct download links.
 */
 import { world, BeforeChatEvent, BlockLocation } from 'mojang-minecraft';
 let toggle = false;
