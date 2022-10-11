@@ -187,7 +187,7 @@
 // o contactarlo via Twitter: https://twitter.com/CibNumeritos - No comparta links de descarga directos.
 // */
 
-import { DynamicPropertiesDefinition, world } from "mojang-minecraft";
+import { BlockLocation, DynamicPropertiesDefinition, Player, Vector, world } from "mojang-minecraft";
 
 const prefix = "!";
 
@@ -206,6 +206,55 @@ function runCommand(command, dimension = 'overworld') {
 
 };
 
+/**
+ * 
+ * @param {Player} player 
+ * @param {string} command 
+ */
+function unknownCommand(player, command) {
+
+    return player.tell(
+        {
+            rawtext: [
+                {
+                    text: "§c"
+                },
+                {
+                    translate: "commands.generic.unknown",
+                    with: [command]
+                },
+            ],
+        }
+    )
+
+};
+
+/**
+ * 
+ * @param {Player} player 
+ * @param {string} command 
+ */
+function wrongParameter(player, param1, param2) {
+
+    return player.tell(
+        {
+            rawtext: [
+                {
+                    text: "§c"
+                },
+                {
+                    translate: "commands.generic.syntax",
+                    with: [
+                        `${param1} `,
+                        param2
+                    ]
+                },
+            ],
+        }
+    )
+
+};
+
 world.events.worldInitialize.subscribe((arg) => {
 
     try {
@@ -214,6 +263,7 @@ world.events.worldInitialize.subscribe((arg) => {
 
         def.defineNumber('MultiplayerSleep:players');
         def.defineNumber('MultiplayerSleep:speed');
+        def.defineNumber('MultiplayerSleep:sleeping_players');
 
         arg.propertyRegistry.registerWorldDynamicProperties(def);
 
@@ -224,6 +274,16 @@ world.events.worldInitialize.subscribe((arg) => {
     };
 
 });
+
+world.events.tick.subscribe(() => {
+
+    for (const p of world.getPlayers()) {
+
+        // console.warn(`${Math.trunc(p.location.x)} ${Math.trunc(Math.ceil(p.location.y))} ${Math.trunc(p.location.z)}`)
+
+    };
+
+})
 
 world.events.beforeChat.subscribe((chatEvent) => {
 
@@ -237,18 +297,24 @@ world.events.beforeChat.subscribe((chatEvent) => {
 
     const player = chatEvent.sender;
 
-    const [command, ...rawParameters] = chatEvent.message.slice(prefix.length).trim().split(/\s+/g);
+    const [command] = chatEvent.message.slice(prefix.length).trim().split(/\s+/g);
 
-    const parameters = rawParameters.toString().trim().match(/"[^"]+"|[^\s]+/g);
+    const parameters = chatEvent.message.substring(command.length + prefix.length).trim().match(/"[^"]+"|[^\s]+/g).map((e) => e.replace(/\"/g, "").toString());;
 
     //TODO: Add default case (unknown command message). Add unknownCommand() function.
-    switch (command) {
+    switch (true) {
 
-        case 'help' || 'h': {
+        case command == 'debug': {
+
+            return player.tell(JSON.stringify(player.runCommand(parameters?.[0])))
+
+        } break;
+
+        case command == 'help' || 'h': {
 
             try {
 
-                return player.tell(`Avaiable commands:\n\n-help: Shows this list.\n\n-(Admin only) sleep: Manage addon settings.\n  Parameters:\n  -players: Set or get the minimum of players required to skip the night.\n  -speed: Speed in wich the night is skipped (ticks to add per second)`);
+                player.tell(`Avaiable commands:\n\n-help: Shows this list.\n\n-(Admin only) sleep: Manage addon settings.\n  Parameters:\n  -players: Set or get the minimum of players required to skip the night.\n  -speed: Speed in wich the night is skipped (ticks to add per second)`);
 
             } catch (error) {
 
@@ -256,9 +322,9 @@ world.events.beforeChat.subscribe((chatEvent) => {
 
             };
 
-        };
+        } break;
 
-        case 'sleep' || 's': {
+        case command == 'sleep' || 's': {
 
             try {
 
@@ -268,23 +334,37 @@ world.events.beforeChat.subscribe((chatEvent) => {
 
                 };
 
-                switch (parameters?.[0]) {
+                if (!parameters?.[0]) {
 
-                    case 'players' || 'p': {
+                    return wrongParameter(player, command, parameters?.[0] ? parameters?.[0] : '');
 
-                        //TODO: Add set and get (parameters?.[1])
+                };
 
-                    } break;
+                if (parameters?.[0] == 'p' || 'players') {
+
+
+                } else if (parameters?.[0] == 'speed' || 's') {
+
+
+                } else {
+
+                    wrongParameter(player, command, parameters?.[0] ? parameters?.[0] : '');
 
                 };
 
             } catch (error) {
 
-                return player.runCommandAsync(`tellraw @s {"rawtext":[{"text":"§cAn internal error occured during command execution. (please report this on github: §bhttps://github.com/CibNumeritos/MultiplayerSleep-Addon§c)\n${error}"}]}`);
+                player.runCommandAsync(`tellraw @s {"rawtext":[{"text":"§cAn internal error occured during command execution. (please report this on github: §bhttps://github.com/CibNumeritos/MultiplayerSleep-Addon§c)\n${error}"}]}`);
 
             };
 
-        };
+        } break;
+
+        default: {
+
+            unknownCommand(player, command);
+
+        } break;
 
     };
 
