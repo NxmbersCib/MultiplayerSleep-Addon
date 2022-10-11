@@ -28,8 +28,4 @@ Cualquier reporte de errores o forks de mejoras de traducción se agradeceran in
   - timeadd: representa la velocidad por-tick en la que la noche sera proceduralmente salteada, este parametro debe ser un entero y no un numero flotante (decimal); **ADVERTENCIA:** Si utiliza mal el parametro y pone valores como "8-458\*2654" *no es mi problema.* El addon solo tomara el primer entero que pueda encontrar en el parametro dado, si el parametro dado no es un entero y solo caracteres de cadena string, un error será devuelto.
 
 [EXPERIMENTAL FEATURES / CARACTERISTICAS EXPERIMENTALES]
-- This addon only needs **GameTest Framework** to work correctly in both versions. / Este addon solo necesita **GameTest Framework** para funcionar correctamente en ambas versiones. 
-
-<p align="center">
-  <img src="./experimentalfeatures.png" width="710">
-</p>
+- This addon only needs **GameTest Framework** to work correctly. / Este addon solo necesita **GameTest Framework** para funcionar correctamente.
