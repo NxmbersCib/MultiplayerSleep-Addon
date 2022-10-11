@@ -39,6 +39,5 @@
             "module_name": "mojang-minecraft",
             "version": "1.0.0-beta"
         }
-    ],
-    "subpacks": []
+    ]
 }
