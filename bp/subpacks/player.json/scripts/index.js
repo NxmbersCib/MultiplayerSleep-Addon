@@ -89,6 +89,7 @@ function commands(data) {
             switch (true) {
                 case params?.[0] == 'sleep': {
                     let s1 = `\n`;
+                    origin
                     runCommand(`tellraw "${origin.nameTag}" {"rawtext":[{"translate":"cib.customcommand.success.help.sleep","with":["${s1}"]}]}`);
                 } break;
                 case params?.[0] == 'help': {
